@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>9 月腾讯生态热点选题参考｜腾讯营销·食品饮料</title>
+  <style>
+    :root {
+      --bg: #f5f8f7;
+      --panel: #ffffff;
+      --panel-soft: #f7fffb;
+      --line: #d8ebe4;
+      --line-strong: #8fd2bd;
+      --text: #19352f;
+      --muted: #5d766e;
+      --green: #1f9e75;
+      --green-soft: #e6f7ef;
+      --blue: #397cae;
+      --blue-soft: #eef5ff;
+      --orange: #a87300;
+      --orange-soft: #fff4d8;
+      --shadow: 0 10px 32px rgba(18, 60, 48, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(180deg, #f3f8f6 0%, #f8fbfa 100%);
+      color: var(--text);
+    }
+    .wrap { max-width: 1560px; margin: 0 auto; padding: 28px 26px 36px; }
+    .hero {
+      background: var(--panel-soft);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 24px 24px 20px;
+      box-shadow: var(--shadow);
+      margin-bottom: 16px;
+    }
+    .hero-top {
+      display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; margin-bottom: 14px;
+    }
+    .title { margin: 0; font-size: 28px; line-height: 1.2; font-weight: 950; }
+    .update-note { margin: 8px 0 0; color: #4f7f70; font-size: 12px; line-height: 1.6; font-weight: 700; letter-spacing: 0.2px; }
+    .subtitle { margin: 10px 0 0; color: var(--muted); font-size: 14px; line-height: 1.8; max-width: 980px; }
+    .stamp {
+      min-width: 240px; padding: 10px 0 10px 18px; border-left: 3px solid rgba(31, 158, 117, 0.28);
+      display: inline-flex; flex-direction: row; gap: 12px; align-items: center; background: transparent; border-radius: 0; box-shadow: none;
+    }
+    .stamp-dot { width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(135deg, #1f9e75 0%, #56c09d 100%); box-shadow: 0 0 0 8px rgba(31, 158, 117, 0.10); flex: 0 0 auto; }
+    .stamp-brand { font-size: 20px; line-height: 1.2; color: var(--green); font-weight: 950; letter-spacing: 0.4px; }
+    .hero-metrics, .method-grid { display: grid; gap: 10px; }
+    .hero-metrics {
+      grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 12px; padding: 8px;
+      background: #ffffff; border: 1px solid var(--line); border-radius: 22px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.65);
+    }
+    .metric, .box, .panel, .version, .hero-entry { background: #fff; border: 1px solid var(--line); border-radius: 18px; }
+    .hero-entry {
+      padding: 14px 18px 13px; text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 6px;
+      transition: 0.18s ease; min-height: 0; border: 1px solid transparent; border-radius: 16px; background: transparent;
+      box-shadow: none; position: relative;
+    }
+    .hero-entry:hover { transform: none; border-color: #dceee6; background: #f8fcfa; box-shadow: none; }
+    .hero-entry.active {
+      background: #f3fcf7; border: 1px solid #bfe6d4; padding: 14px 18px 13px;
+      box-shadow: 0 8px 18px rgba(31, 158, 117, 0.10);
+    }
+    .hero-entry.active::after {
+      content: ""; position: absolute; left: 18px; right: 18px; bottom: 0; height: 3px;
+      border-radius: 999px; background: linear-gradient(90deg, #1f9e75 0%, #56c09d 100%);
+    }
+    .hero-entry .v { margin-top: 0; font-size: 18px; line-height: 1.3; font-weight: 950; white-space: nowrap; }
+    .hero-entry .d { margin-top: 0; font-size: 12px; line-height: 1.6; color: var(--muted); white-space: nowrap; }
+    .hero-entry .entry-link { margin-top: 2px; font-size: 12px; line-height: 1.4; font-weight: 900; color: var(--green); }
+    .hero-entry.link .entry-link { color: var(--blue); }
+    button.hero-entry { appearance: none; width: 100%; font: inherit; cursor: pointer; text-align: left; }
+    .switch-shell {
+      background: var(--panel-soft); border: 1px solid var(--line); border-radius: 24px; padding: 20px;
+      box-shadow: var(--shadow); margin-bottom: 16px;
+    }
+    .switch-top {
+      display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; margin-bottom: 14px;
+    }
+    .switch-title { margin: 0; font-size: 24px; line-height: 1.3; font-weight: 950; }
+    .switch-subtitle { margin: 10px 0 0; color: var(--muted); font-size: 13px; line-height: 1.6; max-width: none; white-space: nowrap; }
+    .view { display: none; }
+    .view.active { display: block; }
+    .material-view { margin-top: 0; }
+    .material-mount { background: #fff; }
+
+    .metric { padding: 14px; }
+    .metric .k { font-size: 11px; color: #7a958c; font-weight: 900; text-transform: uppercase; letter-spacing: 0.6px; }
+    .metric .v { margin-top: 6px; font-size: 16px; line-height: 1.5; font-weight: 800; }
+    .metric .d { margin-top: 6px; font-size: 12px; line-height: 1.6; color: var(--muted); }
+    .method-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 12px; }
+    .box { padding: 16px 16px 14px; height: 100%; }
+    .box h3 { margin: 0 0 10px; font-size: 15px; font-weight: 900; }
+    .box p, .box li { font-size: 13px; line-height: 1.7; color: var(--muted); }
+    .box ul { margin: 0; padding-left: 18px; }
+    .chip-row, .filter-row, .pool-tags, .signal, .actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip, .filter-chip, .pool-tag, .badge, .btn {
+      border-radius: 999px; font-size: 12px; font-weight: 900; padding: 6px 10px; line-height: 1; border: 1px solid transparent;
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .chip-green, .badge-green, .btn-copy { background: var(--green-soft); color: var(--green); border-color: #c8eadb; }
+    .chip-blue, .badge-blue, .btn-link { background: var(--blue-soft); color: var(--blue); border-color: #d8e7fb; }
+    .chip-orange, .badge-orange { background: var(--orange-soft); color: var(--orange); border-color: #ffe2a6; }
+    .filter-row { margin-top: 10px; margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .filter-chip { cursor: pointer; background: #fff; color: #6f8880; border-color: var(--line); transition: 0.18s ease; }
+    .filter-chip.active, .filter-chip:hover { background: #f2fbf6; color: var(--green); border-color: var(--line-strong); transform: translateY(-1px); }
+    .pool-tag { background: #fff; border-color: var(--line); color: #48655d; padding: 8px 10px; }
+    .radar-linkage { display: grid; gap: 16px; align-items: start; }
+    .radar-linkage.layout-split { grid-template-columns: minmax(280px, 0.82fr) minmax(420px, 1.18fr); }
+    .radar-linkage.layout-stacked { grid-template-columns: 1fr; }
+    .list-shell { min-width: 0; display: grid; align-content: start; }
+    .mobile-list-tip { display: none; margin: 0 0 10px; font-size: 12px; color: #6f8880; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 0; }
+    .radar-linkage.layout-split .list-shell { position: sticky; top: 16px; }
+    .radar-linkage.layout-split .grid {
+      grid-template-columns: 1fr; grid-auto-rows: minmax(206px, max-content); max-height: calc(100vh - 120px); overflow: auto; overscroll-behavior: contain;
+      padding-right: 6px; align-content: start;
+    }
+    .card {
+      appearance: none; width: 100%; min-height: 218px; background: #fff; border: 1px solid var(--line); border-radius: 18px;
+      padding: 14px; text-align: left; cursor: pointer; transition: 0.18s ease; display: flex; flex-direction: column; gap: 10px;
+      box-shadow: 0 8px 20px rgba(23, 57, 47, 0.04); font: inherit; color: inherit;
+    }
+    .radar-linkage.layout-split .card { min-height: 206px; padding: 12px 14px; border-radius: 16px; gap: 8px; }
+    .radar-linkage.layout-split .card > * { flex-shrink: 0; }
+    .card:hover { transform: translateY(-3px); border-color: var(--line-strong); box-shadow: 0 14px 26px rgba(23, 57, 47, 0.08); }
+    .card.active { background: #f3fcf7; border: 2px solid #42b883; padding: 13px; }
+    .radar-linkage.layout-split .card.active { padding: 11px 13px; }
+    .card-top, .card-bottom, .desk-head, .meta-grid, .versions, .version-head { display: flex; gap: 8px; }
+    .card-top, .card-bottom { align-items: center; justify-content: space-between; flex-wrap: wrap; }
+    .rank { font-size: 11px; color: #869f97; font-weight: 900; }
+    .card h4 { margin: 0; font-size: 17px; line-height: 1.45; font-weight: 900; }
+    .radar-linkage.layout-split .card h4 { font-size: 16px; line-height: 1.4; }
+    .card p, .relevance, .desk-desc, .desk-anchor, .fit, .shot p, .prompt p, .guide p, .footer-note, .panel li, .risk { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
+    .radar-linkage.layout-split .card p, .radar-linkage.layout-split .relevance {
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .relevance { font-size: 12px; }
+    .card-inline-tip { margin-top: auto; font-size: 12px; line-height: 1.6; color: var(--green); font-weight: 900; }
+    .radar-linkage.layout-split .card-inline-tip { display: none; }
+    .window { margin-left: auto; font-size: 11px; color: #6d857d; font-weight: 800; }
+    .desk-shell { display: grid; gap: 10px; align-self: start; }
+    .radar-linkage.layout-split .desk-shell { position: sticky; top: 16px; }
+    .desk-topbar {
+      background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 14px 16px; display: flex;
+      justify-content: space-between; align-items: flex-start; gap: 12px; transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+    }
+    .desk-kicker { font-size: 11px; line-height: 1.4; color: #6f8880; font-weight: 900; letter-spacing: 0.4px; }
+    .desk-summary { margin: 4px 0 0; font-size: 12px; line-height: 1.7; color: var(--muted); }
+    .desk-toggle {
+      display: none; appearance: none; border: 1px solid var(--line); background: #fff; color: var(--green); border-radius: 999px;
+      padding: 7px 12px; font: inherit; font-size: 12px; font-weight: 900; line-height: 1; cursor: pointer; white-space: nowrap;
+    }
+    .desk {
+      background: #fff; border: 1px solid var(--line); border-radius: 24px; padding: 20px; box-shadow: var(--shadow);
+      transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+    }
+    .radar-linkage.layout-split .desk {
+      max-height: calc(100vh - 128px); overflow: auto; overscroll-behavior: contain; padding-right: 12px;
+    }
+    .desk-shell.flash .desk-topbar, .desk-shell.flash .desk { border-color: #42b883; background: #f5fbf7; animation: deskPulse 1s ease; }
+    .desk-head { display: grid; grid-template-columns: 1.15fr 0.85fr; margin-bottom: 14px; }
+    .desk-title { margin: 0; font-size: 24px; line-height: 1.35; font-weight: 950; }
+    .desk-desc { margin-top: 10px; }
+    .desk-anchor { background: transparent; border: 0; border-radius: 0; padding: 0; color: var(--muted); align-self: center; }
+    .meta-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 12px; margin-bottom: 14px; }
+    .panel, .version { padding: 16px; }
+    .panel h5, .label { margin: 0 0 10px; font-size: 13px; font-weight: 900; color: #386055; }
+    .panel ul { margin: 0; padding-left: 18px; }
+    .versions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 14px; }
+    .radar-linkage.layout-split .desk-head,
+    .radar-linkage.layout-split .meta-grid,
+    .radar-linkage.layout-split .versions { grid-template-columns: 1fr; }
+    .version-name { display: flex; align-items: center; gap: 8px; font-size: 18px; font-weight: 900; }
+    .no { display: inline-flex; width: 26px; height: 26px; align-items: center; justify-content: center; border-radius: 50%; background: #eaf8f1; color: var(--green); font-size: 12px; font-weight: 900; }
+    .btn { text-decoration: none; justify-content: center; cursor: pointer; padding: 10px 14px; }
+    .footer-note { background: #fffaf0; border: 1px solid #f5e2b6; border-radius: 16px; padding: 14px 16px; }
+    @keyframes deskPulse {
+      0% { transform: translateY(0); }
+      35% { transform: translateY(-2px); }
+      100% { transform: translateY(0); }
+    }
+    @media (max-width: 1280px) {
+      .grid, .versions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .hero-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .desk-head, .meta-grid { grid-template-columns: 1fr; }
+      .radar-linkage.layout-split { grid-template-columns: minmax(250px, 0.78fr) minmax(0, 1.22fr); }
+      .radar-linkage.layout-split .versions { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 900px) {
+      .grid, .versions, .hero-metrics, .method-grid, .radar-linkage, .radar-linkage.layout-split, .radar-linkage.layout-stacked { grid-template-columns: 1fr; }
+      .wrap { padding: 16px; }
+      .hero, .switch-shell { padding: 16px; }
+      .switch-top { flex-direction: column; }
+      .switch-subtitle, .hero-entry .v, .hero-entry .d { white-space: normal; }
+      .hero-entry { padding: 13px 14px 12px; }
+      .hero-entry.active { padding: 13px 14px 12px; }
+      .hero-entry.active::after { left: 14px; right: 14px; }
+      .mobile-list-tip { display: block; }
+      .list-shell, .radar-linkage.layout-split .list-shell, .desk-shell, .radar-linkage.layout-split .desk-shell { position: static; top: auto; }
+      .desk-topbar { border-radius: 18px; padding: 12px 14px; }
+      .desk-toggle { display: inline-flex; }
+      .radar-linkage.layout-split .grid, .radar-linkage.layout-split .desk { max-height: none; overflow: visible; padding-right: 0; }
+      .desk-shell.collapsed .desk { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="switch-shell" id="switchTop">
+      <div class="switch-top">
+        <div>
+          <h1 class="switch-title">腾讯平台热点内容参考台</h1>
+          <p class="switch-subtitle">汇总腾讯生态可跟进热点与优质内容样本，帮助商家更快完成信息流选题和内容判断。</p>
+        </div>
+        <div class="stamp"><span class="stamp-dot"></span><span class="stamp-brand">腾讯营销·食品饮料</span></div>
+      </div>
+      <div class="hero-metrics">
+        <button type="button" class="hero-entry nav-entry active" data-view="radar">
+          <div class="v">9 月腾讯生态热点选题参考</div>
+          <div class="d">查看腾讯生态近期热点，快速获取信息流内容的选题方向与切入点。</div>
+          <div class="entry-link">当前正在查看</div>
+        </button>
+        <button type="button" class="hero-entry link nav-entry" data-view="material">
+          <div class="v">视频号信息流优质内容洞察</div>
+          <div class="d">查看优质信息流内容样本，参考更容易获得停留与互动的表达方式。</div>
+          <div class="entry-link">点击切换查看</div>
+        </button>
+      </div>
+    </section>
+    <section class="view active" id="radarView">
+      <section class="hero" id="radarTop">
+        <div class="hero-top">
+          <div>
+            <h1 class="title">9 月腾讯生态热点选题参考</h1>
+            <p class="update-note">最近一次更新时间：9 月 8 日</p>
+            <p class="subtitle">这里聚焦未来30天值得优先试拍的热点机会，帮助你更从容地规划月内内容节奏，并直接查看对应赛道版本与脚本灵感。</p>
+          </div>
+        </div>
+        <div class="method-grid">
+          <div class="box">
+            <h3>怎么用这份选题参考</h3>
+            <ul>
+              <li>先点上方分类，快速找到更适合你当前内容调性的热点组。</li>
+              <li>再点具体热点，桌面端会在右侧联动更新 top3 行业方向；移动端会自动展开下方对应的脚本灵感。</li>
+              <li>如果你当前主推赛道不适合强借热点，就优先选择“家庭 / 校园 / 秋日生活”里的场景型内容机会。</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h3>本次覆盖赛道</h3>
+            <p>面向食品饮料商家整理的 16 个细分赛道；当前每个热点会优先给到最适合该热点的 top3 行业发散，其他方向也可以结合自己的货盘、场景和灵感继续延展制作。</p>
+            <div class="pool-tags"><span class="pool-tag">保健食品</span><span class="pool-tag">粮油调味速食</span><span class="pool-tag">传统滋补</span><span class="pool-tag">休闲食品</span><span class="pool-tag">生鲜</span><span class="pool-tag">膳食营养</span><span class="pool-tag">白酒</span><span class="pool-tag">乳制品</span><span class="pool-tag">茶叶</span><span class="pool-tag">冲调品</span><span class="pool-tag">宠物</span><span class="pool-tag">洋酒</span><span class="pool-tag">海外保健食品</span><span class="pool-tag">葡萄酒</span><span class="pool-tag">母婴食品</span><span class="pool-tag">啤酒</span></div>
+          </div>
+        </div>
+        <div class="chip-row">
+          <span class="chip chip-orange">发布前请结合平台规则与行业要求复核</span>
+        </div>
+      </section>
+      <section class="radar-linkage" id="radarLinkage">
+        <div class="list-shell">
+          <div class="filter-row" id="filters"></div>
+          <p class="mobile-list-tip">点击热点卡片后，下方会自动展开对应的脚本灵感。</p>
+          <section class="grid" id="topicGrid"></section>
+        </div>
+        <div class="desk-shell" id="deskShell">
+          <div class="desk-topbar">
+            <div>
+              <div class="desk-kicker">脚本灵感联动区</div>
+              <p class="desk-summary" id="deskSummary">已默认展开当前热点对应的 top3 行业方向，点击左侧卡片可联动切换。</p>
+            </div>
+            <button type="button" class="desk-toggle" id="deskToggle">收起脚本灵感</button>
+          </div>
+          <section class="desk" id="detailDesk"></section>
+        </div>
+      </section>
+    </section>
+    <section class="view material-view" id="materialView">
+      <div class="material-mount" id="materialMount"></div>
+    </section>
+    <!-- MATERIAL_TEMPLATE -->
+    <!-- MATERIAL_STYLES -->
+  </div>
+  <script>
+    const TOPICS = [{"rank": 1, "category": "体育", "conversion": "情绪借势", "name": "郑钦文连场逆转晋级美网八强", "window": "未来7-10天", "rationale": "强逆转情绪与“状态拉满”叙事同时具备，适合转成补给、自律与陪看型内容。", "relevance": "适合把高燃情绪转成可复制的状态管理或观赛场景。", "anchor": "比分反转 + 桌面陪看 + 第一口情绪放大", "summary": "强逆转情绪与“状态拉满”叙事同时具备，适合转成补给、自律与陪看型内容。", "risk": "避免冒充赛事官方合作；酒类仅限成年人观看赛事或聚会场景。", "evidence": ["近7天竞技赛果与运动员情绪内容持续高频。", "用户更愿意停留在逆转、拼劲、陪看夜这类强情绪场景。", "食品行业更适合切到补给、观赛、分享和状态管理。", "当前优先建议试拍：膳食营养、乳制品、保健食品。"], "versions": [{"industry": "膳食营养", "fit": "适合接状态感、轻补给和规律摄入。 这条热点更适合把“郑钦文连场逆转晋级美网八”转成可立即试拍的内容入口。", "hook": "郑钦文连场逆转晋级美网八强别只围观热搜，真正能拍进日常的是把状态慢慢补回来。", "body": "0-3秒先给高燃瞬间或情绪表情；3-8秒切到产品进入桌面、补给或陪看场景；8-15秒再收回“把状态续上/把气氛拉满”的一句话。", "visual": "随手杯、通勤包、运动后或工位桌面。", "guide": "突出节奏管理，避免夸大功能。"}, {"industry": "乳制品", "fit": "适合早餐、放学后、运动后和夜晚安稳感内容。 这条热点更适合把“郑钦文连场逆转晋级美网八”转成可立即试拍的内容入口。", "hook": "郑钦文连场逆转晋级美网八强这波最容易让人代入的，其实是手边那一口更稳的日常补给。", "body": "0-3秒先给高燃瞬间或情绪表情；3-8秒切到产品进入桌面、补给或陪看场景；8-15秒再收回“把状态续上/把气氛拉满”的一句话。", "visual": "冰箱开门、玻璃杯、吸管、早餐桌。", "guide": "更适合真实纪实感，不要广告片腔调。"}, {"industry": "保健食品", "fit": "适合接日常状态管理、规律感与轻科普表达。 这条热点更适合把“郑钦文连场逆转晋级美网八”转成可立即试拍的内容入口。", "hook": "郑钦文连场逆转晋级美网八强这波别先讲功效，先把你每天怎么把状态顾住拍出来。", "body": "0-3秒先给高燃瞬间或情绪表情；3-8秒切到产品进入桌面、补给或陪看场景；8-15秒再收回“把状态续上/把气氛拉满”的一句话。", "visual": "极简桌面、小瓶装、晨间或夜间灯光。", "guide": "只做日常管理心智，不碰疗效承诺。"}]}, {"rank": 2, "category": "体育", "conversion": "陪伴消费", "name": "中国女篮大胜意大利冲击八强", "window": "未来7-10天", "rationale": "看球夜、姐妹局、群体欢呼感很强，适合做桌面分享与即时消费内容。", "relevance": "更适合观赛氛围，而不是专业技战术解说。", "anchor": "比分反转 + 桌面陪看 + 第一口情绪放大", "summary": "看球夜、姐妹局、群体欢呼感很强，适合做桌面分享与即时消费内容。", "risk": "避免冒充赛事官方合作；酒类仅限成年人观看赛事或聚会场景。", "evidence": ["近7天竞技赛果与运动员情绪内容持续高频。", "用户更愿意停留在逆转、拼劲、陪看夜这类强情绪场景。", "食品行业更适合切到补给、观赛、分享和状态管理。", "当前优先建议试拍：休闲食品、啤酒、冲调品。"], "versions": [{"industry": "休闲食品", "fit": "适合承接陪看、破冰、分享和轻松嘴替场景。 这条热点更适合把“中国女篮大胜意大利冲击八”转成可立即试拍的内容入口。", "hook": "中国女篮大胜意大利冲击八强一上强度，先别讲卖点，把边看边吃那一下拍出来就够了。", "body": "0-3秒先给高燃瞬间或情绪表情；3-8秒切到产品进入桌面、补给或陪看场景；8-15秒再收回“把状态续上/把气氛拉满”的一句话。", "visual": "拆袋、多人分食、沙发或工位桌面。", "guide": "用手部互动和咀嚼声强化停留感。"}, {"industry": "啤酒", "fit": "适合看球、演出后夜聊和朋友小聚的成年人氛围。 这条热点更适合把“中国女篮大胜意大利冲击八”转成可立即试拍的内容入口。", "hook": "中国女篮大胜意大利冲击八强一上情绪，真正懂氛围的人已经先把冰好的这一杯拿稳了。", "body": "0-3秒先给高燃瞬间或情绪表情；3-8秒切到产品进入桌面、补给或陪看场景；8-15秒再收回“把状态续上/把气氛拉满”的一句话。", "visual": "开罐、气泡、冰杯、成年朋友围桌。", "guide": "仅限成年人场景，避免过量饮酒表达。"}, {"industry": "冲调品", "fit": "适合工位、宿舍、夜间陪伴和即刻热饮场景。 这条热点更适合把“中国女篮大胜意大利冲击八”转成可立即试拍的内容入口。", "hook": "中国女篮大胜意大利冲击八强别等刷完才找精神，先把手边这一杯冲开。", "body": "0-3秒先给高燃瞬间或情绪表情；3-8秒切到产品进入桌面、补给或陪看场景；8-15秒再收回“把状态续上/把气氛拉满”的一句话。", "visual": "马克杯、热水、搅拌、杯口热气。", "guide": "抓住3秒冲开瞬间，最容易留人。"}]}, {"rank": 3, "category": "体育", "conversion": "状态管理", "name": "赵心童短局出局引发状态讨论", "window": "未来7-10天", "rationale": "“世界第一也会失手”天然带出节奏、稳定感和心态管理话题。", "relevance": "适合把“稳住节奏”转成工位、通勤或夜读场景。", "anchor": "比分反转 + 桌面陪看 + 第一口情绪放大", "summary": "“世界第一也会失手”天然带出节奏、稳定感和心态管理话题。", "risk": "避免冒充赛事官方合作；酒类仅限成年人观看赛事或聚会场景。", "evidence": ["近7天竞技赛果与运动员情绪内容持续高频。", "用户更愿意停留在逆转、拼劲、陪看夜这类强情绪场景。", "食品行业更适合切到补给、观赛、分享和状态管理。", "当前优先建议试拍：茶叶、膳食营养、冲调品。"], "versions": [{"industry": "茶叶", "fit": "适合把节奏放慢，拍出一口热气和松弛感。 这条热点更适合把“赵心童短局出局引发状态讨”转成可立即试拍的内容入口。", "hook": "赵心童短局出局引发状态讨论别急着分析，先给观众一杯能把节奏慢下来的热茶。", "body": "0-3秒先给高燃瞬间或情绪表情；3-8秒切到产品进入桌面、补给或陪看场景；8-15秒再收回“把状态续上/把气氛拉满”的一句话。", "visual": "注水、茶汤、玻璃杯、木桌、热气。", "guide": "以氛围和质感取胜，不必堆知识。"}, {"industry": "膳食营养", "fit": "适合接状态感、轻补给和规律摄入。 这条热点更适合把“赵心童短局出局引发状态讨”转成可立即试拍的内容入口。", "hook": "赵心童短局出局引发状态讨论别只围观热搜，真正能拍进日常的是把状态慢慢补回来。", "body": "0-3秒先给高燃瞬间或情绪表情；3-8秒切到产品进入桌面、补给或陪看场景；8-15秒再收回“把状态续上/把气氛拉满”的一句话。", "visual": "随手杯、通勤包、运动后或工位桌面。", "guide": "突出节奏管理，避免夸大功能。"}, {"industry": "冲调品", "fit": "适合工位、宿舍、夜间陪伴和即刻热饮场景。 这条热点更适合把“赵心童短局出局引发状态讨”转成可立即试拍的内容入口。", "hook": "赵心童短局出局引发状态讨论别等刷完才找精神，先把手边这一杯冲开。", "body": "0-3秒先给高燃瞬间或情绪表情；3-8秒切到产品进入桌面、补给或陪看场景；8-15秒再收回“把状态续上/把气氛拉满”的一句话。", "visual": "马克杯、热水、搅拌、杯口热气。", "guide": "抓住3秒冲开瞬间，最容易留人。"}]}, {"rank": 4, "category": "体育", "conversion": "高燃视觉", "name": "张雪机车法国站包揽前二", "window": "未来7-10天", "rationale": "速度感、突破感、女性力量都很强，适合做极具镜头张力的短视频开场。", "relevance": "适合接快节奏剪辑和“第一秒就炸”的视觉表达。", "anchor": "比分反转 + 桌面陪看 + 第一口情绪放大", "summary": "速度感、突破感、女性力量都很强，适合做极具镜头张力的短视频开场。", "risk": "避免冒充赛事官方合作；酒类仅限成年人观看赛事或聚会场景。", "evidence": ["近7天竞技赛果与运动员情绪内容持续高频。", "用户更愿意停留在逆转、拼劲、陪看夜这类强情绪场景。", "食品行业更适合切到补给、观赛、分享和状态管理。", "当前优先建议试拍：啤酒、休闲食品、乳制品。"], "versions": [{"industry": "啤酒", "fit": "适合看球、演出后夜聊和朋友小聚的成年人氛围。 这条热点更适合把“张雪机车法国站包揽前二”转成可立即试拍的内容入口。", "hook": "张雪机车法国站包揽前二一上情绪，真正懂氛围的人已经先把冰好的这一杯拿稳了。", "body": "0-3秒先给高燃瞬间或情绪表情；3-8秒切到产品进入桌面、补给或陪看场景；8-15秒再收回“把状态续上/把气氛拉满”的一句话。", "visual": "开罐、气泡、冰杯、成年朋友围桌。", "guide": "仅限成年人场景，避免过量饮酒表达。"}, {"industry": "休闲食品", "fit": "适合承接陪看、破冰、分享和轻松嘴替场景。 这条热点更适合把“张雪机车法国站包揽前二”转成可立即试拍的内容入口。", "hook": "张雪机车法国站包揽前二一上强度，先别讲卖点，把边看边吃那一下拍出来就够了。", "body": "0-3秒先给高燃瞬间或情绪表情；3-8秒切到产品进入桌面、补给或陪看场景；8-15秒再收回“把状态续上/把气氛拉满”的一句话。", "visual": "拆袋、多人分食、沙发或工位桌面。", "guide": "用手部互动和咀嚼声强化停留感。"}, {"industry": "乳制品", "fit": "适合早餐、放学后、运动后和夜晚安稳感内容。 这条热点更适合把“张雪机车法国站包揽前二”转成可立即试拍的内容入口。", "hook": "张雪机车法国站包揽前二这波最容易让人代入的，其实是手边那一口更稳的日常补给。", "body": "0-3秒先给高燃瞬间或情绪表情；3-8秒切到产品进入桌面、补给或陪看场景；8-15秒再收回“把状态续上/把气氛拉满”的一句话。", "visual": "冰箱开门、玻璃杯、吸管、早餐桌。", "guide": "更适合真实纪实感，不要广告片腔调。"}]}, {"rank": 5, "category": "体育", "conversion": "夜聊陪伴", "name": "阿森纳逆转切尔西带火周末看球夜", "window": "未来7-10天", "rationale": "足球强对话本身就是夜间聊天和朋友小聚的天然流量入口。", "relevance": "适合转成“边看边聊边喝边吃”的周末氛围。", "anchor": "比分反转 + 桌面陪看 + 第一口情绪放大", "summary": "足球强对话本身就是夜间聊天和朋友小聚的天然流量入口。", "risk": "避免冒充赛事官方合作；酒类仅限成年人观看赛事或聚会场景。", "evidence": ["近7天竞技赛果与运动员情绪内容持续高频。", "用户更愿意停留在逆转、拼劲、陪看夜这类强情绪场景。", "食品行业更适合切到补给、观赛、分享和状态管理。", "当前优先建议试拍：休闲食品、啤酒、洋酒。"], "versions": [{"industry": "休闲食品", "fit": "适合承接陪看、破冰、分享和轻松嘴替场景。 这条热点更适合把“阿森纳逆转切尔西带火周末”转成可立即试拍的内容入口。", "hook": "阿森纳逆转切尔西带火周末看球夜一上强度，先别讲卖点，把边看边吃那一下拍出来就够了。", "body": "0-3秒先给高燃瞬间或情绪表情；3-8秒切到产品进入桌面、补给或陪看场景；8-15秒再收回“把状态续上/把气氛拉满”的一句话。", "visual": "拆袋、多人分食、沙发或工位桌面。", "guide": "用手部互动和咀嚼声强化停留感。"}, {"industry": "啤酒", "fit": "适合看球、演出后夜聊和朋友小聚的成年人氛围。 这条热点更适合把“阿森纳逆转切尔西带火周末”转成可立即试拍的内容入口。", "hook": "阿森纳逆转切尔西带火周末看球夜一上情绪，真正懂氛围的人已经先把冰好的这一杯拿稳了。", "body": "0-3秒先给高燃瞬间或情绪表情；3-8秒切到产品进入桌面、补给或陪看场景；8-15秒再收回“把状态续上/把气氛拉满”的一句话。", "visual": "开罐、气泡、冰杯、成年朋友围桌。", "guide": "仅限成年人场景，避免过量饮酒表达。"}, {"industry": "洋酒", "fit": "适合更都市、更夜生活一点的观影或小聚氛围。 这条热点更适合把“阿森纳逆转切尔西带火周末”转成可立即试拍的内容入口。", "hook": "阿森纳逆转切尔西带火周末看球夜镜头别只给屏幕，把冰块落下去那一下也拍进去。", "body": "0-3秒先给高燃瞬间或情绪表情；3-8秒切到产品进入桌面、补给或陪看场景；8-15秒再收回“把状态续上/把气氛拉满”的一句话。", "visual": "矮杯、冰球、反光桌面、都市夜灯。", "guide": "只做成年人小酌氛围，不做豪饮。"}]}, {"rank": 1, "category": "经济", "conversion": "稳预期表达", "name": "3000亿特别国债与金融央企增资", "window": "未来10-15天", "rationale": "数字冲击力强，适合转成“稳、值、长期看”的克制表达。", "relevance": "更适合成熟客群与高客单家庭消费场景。", "anchor": "数字标题 + 家庭预算感 + 稳字当头的表达", "summary": "数字冲击力强，适合转成“稳、值、长期看”的克制表达。", "risk": "不要冒充财经机构或给出投资建议，只做生活化借势。", "evidence": ["近7天宏观经济与金融政策话题讨论密集。", "用户更容易被“稳预期、稳现金流、稳消费”这类叙事吸引。", "食品行业适合转成囤货、理性购买、工位陪伴和家宴场景。", "当前优先建议试拍：茶叶、白酒、葡萄酒。"], "versions": [{"industry": "茶叶", "fit": "适合把节奏放慢，拍出一口热气和松弛感。 这条热点更适合把“3000亿特别国债与金融”转成可立即试拍的内容入口。", "hook": "3000亿特别国债与金融央企增资别急着分析，先给观众一杯能把节奏慢下来的热茶。", "body": "0-3秒先用数字标题或预算焦虑切题；3-8秒切到囤货、工位或家宴动作；8-15秒收在“这时候先把日常过稳”这一句。", "visual": "注水、茶汤、玻璃杯、木桌、热气。", "guide": "以氛围和质感取胜，不必堆知识。"}, {"industry": "白酒", "fit": "适合成熟客群的家宴、夜聊和待客场景。 这条热点更适合把“3000亿特别国债与金融”转成可立即试拍的内容入口。", "hook": "3000亿特别国债与金融央企增资不必硬蹭热词，把成年人围桌时那一下开瓶声拍出来就够了。", "body": "0-3秒先用数字标题或预算焦虑切题；3-8秒切到囤货、工位或家宴动作；8-15秒收在“这时候先把日常过稳”这一句。", "visual": "家宴餐桌、热菜、分杯、暖黄灯光。", "guide": "只限成年人场景，不鼓励豪饮。"}, {"industry": "葡萄酒", "fit": "适合周末、观影、双人聊天和慢节奏氛围。 这条热点更适合把“3000亿特别国债与金融”转成可立即试拍的内容入口。", "hook": "3000亿特别国债与金融央企增资真正有画面的，不是热搜本身，而是这杯慢慢醒开的周末感。", "body": "0-3秒先用数字标题或预算焦虑切题；3-8秒切到囤货、工位或家宴动作；8-15秒收在“这时候先把日常过稳”这一句。", "visual": "高脚杯、倒酒、暖光餐桌、电影屏幕光。", "guide": "更适合质感路线，不宜过度热闹。"}]}, {"rank": 2, "category": "经济", "conversion": "理性决策", "name": "5000亿买断式逆回购稳流动性", "window": "未来10-15天", "rationale": "“先稳住”是这波讨论的核心情绪，能自然过渡到理性囤货与规律节奏。", "relevance": "适合工位、通勤和低压决策类内容。", "anchor": "数字标题 + 家庭预算感 + 稳字当头的表达", "summary": "“先稳住”是这波讨论的核心情绪，能自然过渡到理性囤货与规律节奏。", "risk": "不要冒充财经机构或给出投资建议，只做生活化借势。", "evidence": ["近7天宏观经济与金融政策话题讨论密集。", "用户更容易被“稳预期、稳现金流、稳消费”这类叙事吸引。", "食品行业适合转成囤货、理性购买、工位陪伴和家宴场景。", "当前优先建议试拍：茶叶、冲调品、膳食营养。"], "versions": [{"industry": "茶叶", "fit": "适合把节奏放慢，拍出一口热气和松弛感。 这条热点更适合把“5000亿买断式逆回购稳”转成可立即试拍的内容入口。", "hook": "5000亿买断式逆回购稳流动性别急着分析，先给观众一杯能把节奏慢下来的热茶。", "body": "0-3秒先用数字标题或预算焦虑切题；3-8秒切到囤货、工位或家宴动作；8-15秒收在“这时候先把日常过稳”这一句。", "visual": "注水、茶汤、玻璃杯、木桌、热气。", "guide": "以氛围和质感取胜，不必堆知识。"}, {"industry": "冲调品", "fit": "适合工位、宿舍、夜间陪伴和即刻热饮场景。 这条热点更适合把“5000亿买断式逆回购稳”转成可立即试拍的内容入口。", "hook": "5000亿买断式逆回购稳流动性别等刷完才找精神，先把手边这一杯冲开。", "body": "0-3秒先用数字标题或预算焦虑切题；3-8秒切到囤货、工位或家宴动作；8-15秒收在“这时候先把日常过稳”这一句。", "visual": "马克杯、热水、搅拌、杯口热气。", "guide": "抓住3秒冲开瞬间，最容易留人。"}, {"industry": "膳食营养", "fit": "适合接状态感、轻补给和规律摄入。 这条热点更适合把“5000亿买断式逆回购稳”转成可立即试拍的内容入口。", "hook": "5000亿买断式逆回购稳流动性别只围观热搜，真正能拍进日常的是把状态慢慢补回来。", "body": "0-3秒先用数字标题或预算焦虑切题；3-8秒切到囤货、工位或家宴动作；8-15秒收在“这时候先把日常过稳”这一句。", "visual": "随手杯、通勤包、运动后或工位桌面。", "guide": "突出节奏管理，避免夸大功能。"}]}, {"rank": 3, "category": "经济", "conversion": "预算敏感", "name": "国际油价波动叠加成品油调价窗口", "window": "未来7-10天", "rationale": "用户会自然联想到出行成本和家庭预算，适合拍省心、省时和备货逻辑。", "relevance": "更适合做“别让生活被波动打乱”的现实感脚本。", "anchor": "数字标题 + 家庭预算感 + 稳字当头的表达", "summary": "用户会自然联想到出行成本和家庭预算，适合拍省心、省时和备货逻辑。", "risk": "不要冒充财经机构或给出投资建议，只做生活化借势。", "evidence": ["近7天宏观经济与金融政策话题讨论密集。", "用户更容易被“稳预期、稳现金流、稳消费”这类叙事吸引。", "食品行业适合转成囤货、理性购买、工位陪伴和家宴场景。", "当前优先建议试拍：粮油调味速食、冲调品、休闲食品。"], "versions": [{"industry": "粮油调味速食", "fit": "适合拍“十分钟上桌”“先把一顿饭做稳”的效率内容。 这条热点更适合把“国际油价波动叠加成品油调”转成可立即试拍的内容入口。", "hook": "国际油价波动叠加成品油调价窗口别空聊趋势，先拍一顿十分钟能上桌的真实吃法。", "body": "0-3秒先用数字标题或预算焦虑切题；3-8秒切到囤货、工位或家宴动作；8-15秒收在“这时候先把日常过稳”这一句。", "visual": "厨房灶台、起锅、拌面或热饭上桌。", "guide": "优先用真实厨房速度感，不要堆复杂花活。"}, {"industry": "冲调品", "fit": "适合工位、宿舍、夜间陪伴和即刻热饮场景。 这条热点更适合把“国际油价波动叠加成品油调”转成可立即试拍的内容入口。", "hook": "国际油价波动叠加成品油调价窗口别等刷完才找精神，先把手边这一杯冲开。", "body": "0-3秒先用数字标题或预算焦虑切题；3-8秒切到囤货、工位或家宴动作；8-15秒收在“这时候先把日常过稳”这一句。", "visual": "马克杯、热水、搅拌、杯口热气。", "guide": "抓住3秒冲开瞬间，最容易留人。"}, {"industry": "休闲食品", "fit": "适合承接陪看、破冰、分享和轻松嘴替场景。 这条热点更适合把“国际油价波动叠加成品油调”转成可立即试拍的内容入口。", "hook": "国际油价波动叠加成品油调价窗口一上强度，先别讲卖点，把边看边吃那一下拍出来就够了。", "body": "0-3秒先用数字标题或预算焦虑切题；3-8秒切到囤货、工位或家宴动作；8-15秒收在“这时候先把日常过稳”这一句。", "visual": "拆袋、多人分食、沙发或工位桌面。", "guide": "用手部互动和咀嚼声强化停留感。"}]}, {"rank": 4, "category": "经济", "conversion": "工位陪伴", "name": "算力硬件领涨带火科技工位情绪", "window": "未来7-10天", "rationale": "科技股回暖会把内容往“工位、开盘、盯盘、边看边聊”方向推。", "relevance": "适合办公桌面、午后能量和夜间加班场景。", "anchor": "数字标题 + 家庭预算感 + 稳字当头的表达", "summary": "科技股回暖会把内容往“工位、开盘、盯盘、边看边聊”方向推。", "risk": "不要冒充财经机构或给出投资建议，只做生活化借势。", "evidence": ["近7天宏观经济与金融政策话题讨论密集。", "用户更容易被“稳预期、稳现金流、稳消费”这类叙事吸引。", "食品行业适合转成囤货、理性购买、工位陪伴和家宴场景。", "当前优先建议试拍：冲调品、茶叶、休闲食品。"], "versions": [{"industry": "冲调品", "fit": "适合工位、宿舍、夜间陪伴和即刻热饮场景。 这条热点更适合把“算力硬件领涨带火科技工位”转成可立即试拍的内容入口。", "hook": "算力硬件领涨带火科技工位情绪别等刷完才找精神，先把手边这一杯冲开。", "body": "0-3秒先用数字标题或预算焦虑切题；3-8秒切到囤货、工位或家宴动作；8-15秒收在“这时候先把日常过稳”这一句。", "visual": "马克杯、热水、搅拌、杯口热气。", "guide": "抓住3秒冲开瞬间，最容易留人。"}, {"industry": "茶叶", "fit": "适合把节奏放慢，拍出一口热气和松弛感。 这条热点更适合把“算力硬件领涨带火科技工位”转成可立即试拍的内容入口。", "hook": "算力硬件领涨带火科技工位情绪别急着分析，先给观众一杯能把节奏慢下来的热茶。", "body": "0-3秒先用数字标题或预算焦虑切题；3-8秒切到囤货、工位或家宴动作；8-15秒收在“这时候先把日常过稳”这一句。", "visual": "注水、茶汤、玻璃杯、木桌、热气。", "guide": "以氛围和质感取胜，不必堆知识。"}, {"industry": "休闲食品", "fit": "适合承接陪看、破冰、分享和轻松嘴替场景。 这条热点更适合把“算力硬件领涨带火科技工位”转成可立即试拍的内容入口。", "hook": "算力硬件领涨带火科技工位情绪一上强度，先别讲卖点，把边看边吃那一下拍出来就够了。", "body": "0-3秒先用数字标题或预算焦虑切题；3-8秒切到囤货、工位或家宴动作；8-15秒收在“这时候先把日常过稳”这一句。", "visual": "拆袋、多人分食、沙发或工位桌面。", "guide": "用手部互动和咀嚼声强化停留感。"}]}, {"rank": 5, "category": "经济", "conversion": "家宴想象", "name": "深圳楼市周末升温与刚需盘回暖", "window": "未来10-15天", "rationale": "“搬新家、看房、定下来了”很容易转成餐桌与庆祝内容。", "relevance": "适合做温和、不炫耀的新生活感。", "anchor": "数字标题 + 家庭预算感 + 稳字当头的表达", "summary": "“搬新家、看房、定下来了”很容易转成餐桌与庆祝内容。", "risk": "不要冒充财经机构或给出投资建议，只做生活化借势。", "evidence": ["近7天宏观经济与金融政策话题讨论密集。", "用户更容易被“稳预期、稳现金流、稳消费”这类叙事吸引。", "食品行业适合转成囤货、理性购买、工位陪伴和家宴场景。", "当前优先建议试拍：乳制品、粮油调味速食、葡萄酒。"], "versions": [{"industry": "乳制品", "fit": "适合早餐、放学后、运动后和夜晚安稳感内容。 这条热点更适合把“深圳楼市周末升温与刚需盘”转成可立即试拍的内容入口。", "hook": "深圳楼市周末升温与刚需盘回暖这波最容易让人代入的，其实是手边那一口更稳的日常补给。", "body": "0-3秒先用数字标题或预算焦虑切题；3-8秒切到囤货、工位或家宴动作；8-15秒收在“这时候先把日常过稳”这一句。", "visual": "冰箱开门、玻璃杯、吸管、早餐桌。", "guide": "更适合真实纪实感，不要广告片腔调。"}, {"industry": "粮油调味速食", "fit": "适合拍“十分钟上桌”“先把一顿饭做稳”的效率内容。 这条热点更适合把“深圳楼市周末升温与刚需盘”转成可立即试拍的内容入口。", "hook": "深圳楼市周末升温与刚需盘回暖别空聊趋势，先拍一顿十分钟能上桌的真实吃法。", "body": "0-3秒先用数字标题或预算焦虑切题；3-8秒切到囤货、工位或家宴动作；8-15秒收在“这时候先把日常过稳”这一句。", "visual": "厨房灶台、起锅、拌面或热饭上桌。", "guide": "优先用真实厨房速度感，不要堆复杂花活。"}, {"industry": "葡萄酒", "fit": "适合周末、观影、双人聊天和慢节奏氛围。 这条热点更适合把“深圳楼市周末升温与刚需盘”转成可立即试拍的内容入口。", "hook": "深圳楼市周末升温与刚需盘回暖真正有画面的，不是热搜本身，而是这杯慢慢醒开的周末感。", "body": "0-3秒先用数字标题或预算焦虑切题；3-8秒切到囤货、工位或家宴动作；8-15秒收在“这时候先把日常过稳”这一句。", "visual": "高脚杯、倒酒、暖光餐桌、电影屏幕光。", "guide": "更适合质感路线，不宜过度热闹。"}]}, {"rank": 1, "category": "社会", "conversion": "信任转化", "name": "零食量贩门店专项整治", "window": "未来10-15天", "rationale": "食品行业自己成为公共议题主角，最适合拍透明与安心感。", "relevance": "适合做配料、日期、秤重、上架流程等看得见的内容。", "anchor": "新闻议题 + 透明动作 + 安心感镜头", "summary": "食品行业自己成为公共议题主角，最适合拍透明与安心感。", "risk": "公共议题只能做透明、提醒、关怀和陪伴，不能借事件直接促销。", "evidence": ["近7天民生、安全、监管类热点保持高讨论度。", "这类话题天然带有“信任”“安心”“透明”需求。", "食品客户更适合借“看得见、查得到、买得明白”的表达。", "当前优先建议试拍：休闲食品、母婴食品、保健食品。"], "versions": [{"industry": "休闲食品", "fit": "适合承接陪看、破冰、分享和轻松嘴替场景。 这条热点更适合把“零食量贩门店专项整治”转成可立即试拍的内容入口。", "hook": "零食量贩门店专项整治一上强度，先别讲卖点，把边看边吃那一下拍出来就够了。", "body": "0-3秒先给提醒或新闻感字卡；3-8秒拍透明动作、包装细节或备餐流程；8-15秒收在“看得见才安心”的表达。", "visual": "拆袋、多人分食、沙发或工位桌面。", "guide": "用手部互动和咀嚼声强化停留感。"}, {"industry": "母婴食品", "fit": "适合“给孩子这一口先选稳妥的”安心表达。 这条热点更适合把“零食量贩门店专项整治”转成可立即试拍的内容入口。", "hook": "零食量贩门店专项整治给孩子吃的这一口，先别讲口味，先把安心感拍清楚。", "body": "0-3秒先给提醒或新闻感字卡；3-8秒拍透明动作、包装细节或备餐流程；8-15秒收在“看得见才安心”的表达。", "visual": "儿童餐桌、书包、包装细节、家长手部。", "guide": "只做透明和照顾感，不碰功效焦虑。"}, {"industry": "保健食品", "fit": "适合接日常状态管理、规律感与轻科普表达。 这条热点更适合把“零食量贩门店专项整治”转成可立即试拍的内容入口。", "hook": "零食量贩门店专项整治这波别先讲功效，先把你每天怎么把状态顾住拍出来。", "body": "0-3秒先给提醒或新闻感字卡；3-8秒拍透明动作、包装细节或备餐流程；8-15秒收在“看得见才安心”的表达。", "visual": "极简桌面、小瓶装、晨间或夜间灯光。", "guide": "只做日常管理心智，不碰疗效承诺。"}]}, {"rank": 2, "category": "社会", "conversion": "透明安心", "name": "幽灵外卖重罚与明厨亮灶", "window": "未来10-15天", "rationale": "外卖安全会直接触发用户“我到底怎么选”的真实需求。", "relevance": "适合把“查得到”“看得见”拍成短视频动作。", "anchor": "新闻议题 + 透明动作 + 安心感镜头", "summary": "外卖安全会直接触发用户“我到底怎么选”的真实需求。", "risk": "公共议题只能做透明、提醒、关怀和陪伴，不能借事件直接促销。", "evidence": ["近7天民生、安全、监管类热点保持高讨论度。", "这类话题天然带有“信任”“安心”“透明”需求。", "食品客户更适合借“看得见、查得到、买得明白”的表达。", "当前优先建议试拍：粮油调味速食、生鲜、母婴食品。"], "versions": [{"industry": "粮油调味速食", "fit": "适合拍“十分钟上桌”“先把一顿饭做稳”的效率内容。 这条热点更适合把“幽灵外卖重罚与明厨亮灶”转成可立即试拍的内容入口。", "hook": "幽灵外卖重罚与明厨亮灶别空聊趋势，先拍一顿十分钟能上桌的真实吃法。", "body": "0-3秒先给提醒或新闻感字卡；3-8秒拍透明动作、包装细节或备餐流程；8-15秒收在“看得见才安心”的表达。", "visual": "厨房灶台、起锅、拌面或热饭上桌。", "guide": "优先用真实厨房速度感，不要堆复杂花活。"}, {"industry": "生鲜", "fit": "最适合把趋势拍成切开、下锅、上桌的真实动作。 这条热点更适合把“幽灵外卖重罚与明厨亮灶”转成可立即试拍的内容入口。", "hook": "幽灵外卖重罚与明厨亮灶别光说热度，直接把切开、下锅、第一口端上桌。", "body": "0-3秒先给提醒或新闻感字卡；3-8秒拍透明动作、包装细节或备餐流程；8-15秒收在“看得见才安心”的表达。", "visual": "砧板、锅气、食材纹理、热菜上桌。", "guide": "先拍食材状态，再落商品信息。"}, {"industry": "母婴食品", "fit": "适合“给孩子这一口先选稳妥的”安心表达。 这条热点更适合把“幽灵外卖重罚与明厨亮灶”转成可立即试拍的内容入口。", "hook": "幽灵外卖重罚与明厨亮灶给孩子吃的这一口，先别讲口味，先把安心感拍清楚。", "body": "0-3秒先给提醒或新闻感字卡；3-8秒拍透明动作、包装细节或备餐流程；8-15秒收在“看得见才安心”的表达。", "visual": "儿童餐桌、书包、包装细节、家长手部。", "guide": "只做透明和照顾感，不碰功效焦虑。"}]}, {"rank": 3, "category": "社会", "conversion": "理性消费", "name": "低保女生赴港追星资格争议", "window": "未来7-10天", "rationale": "这波话题核心是“钱怎么花、什么算体面”，非常适合拍克制消费观。", "relevance": "适合从小确幸、松弛而不过度消费的角度切入。", "anchor": "新闻议题 + 透明动作 + 安心感镜头", "summary": "这波话题核心是“钱怎么花、什么算体面”，非常适合拍克制消费观。", "risk": "公共议题只能做透明、提醒、关怀和陪伴，不能借事件直接促销。", "evidence": ["近7天民生、安全、监管类热点保持高讨论度。", "这类话题天然带有“信任”“安心”“透明”需求。", "食品客户更适合借“看得见、查得到、买得明白”的表达。", "当前优先建议试拍：冲调品、休闲食品、茶叶。"], "versions": [{"industry": "冲调品", "fit": "适合工位、宿舍、夜间陪伴和即刻热饮场景。 这条热点更适合把“低保女生赴港追星资格争议”转成可立即试拍的内容入口。", "hook": "低保女生赴港追星资格争议别等刷完才找精神，先把手边这一杯冲开。", "body": "0-3秒先给提醒或新闻感字卡；3-8秒拍透明动作、包装细节或备餐流程；8-15秒收在“看得见才安心”的表达。", "visual": "马克杯、热水、搅拌、杯口热气。", "guide": "抓住3秒冲开瞬间，最容易留人。"}, {"industry": "休闲食品", "fit": "适合承接陪看、破冰、分享和轻松嘴替场景。 这条热点更适合把“低保女生赴港追星资格争议”转成可立即试拍的内容入口。", "hook": "低保女生赴港追星资格争议一上强度，先别讲卖点，把边看边吃那一下拍出来就够了。", "body": "0-3秒先给提醒或新闻感字卡；3-8秒拍透明动作、包装细节或备餐流程；8-15秒收在“看得见才安心”的表达。", "visual": "拆袋、多人分食、沙发或工位桌面。", "guide": "用手部互动和咀嚼声强化停留感。"}, {"industry": "茶叶", "fit": "适合把节奏放慢，拍出一口热气和松弛感。 这条热点更适合把“低保女生赴港追星资格争议”转成可立即试拍的内容入口。", "hook": "低保女生赴港追星资格争议别急着分析，先给观众一杯能把节奏慢下来的热茶。", "body": "0-3秒先给提醒或新闻感字卡；3-8秒拍透明动作、包装细节或备餐流程；8-15秒收在“看得见才安心”的表达。", "visual": "注水、茶汤、玻璃杯、木桌、热气。", "guide": "以氛围和质感取胜，不必堆知识。"}]}, {"rank": 4, "category": "社会", "conversion": "温暖关怀", "name": "吉隆泥石流救援与灾后关注", "window": "未来7-10天", "rationale": "公共事件会把内容拉回“朴素、真实、互助”这一层。", "relevance": "更适合关怀表达，不适合强促销。", "anchor": "新闻议题 + 透明动作 + 安心感镜头", "summary": "公共事件会把内容拉回“朴素、真实、互助”这一层。", "risk": "公共议题只能做透明、提醒、关怀和陪伴，不能借事件直接促销。", "evidence": ["近7天民生、安全、监管类热点保持高讨论度。", "这类话题天然带有“信任”“安心”“透明”需求。", "食品客户更适合借“看得见、查得到、买得明白”的表达。", "当前优先建议试拍：传统滋补、冲调品、乳制品。"], "versions": [{"industry": "传统滋补", "fit": "适合接“家里开始煮点热乎的”这类照顾感。 这条热点更适合把“吉隆泥石流救援与灾后关注”转成可立即试拍的内容入口。", "hook": "吉隆泥石流救援与灾后关注到了这一步，最能打动人的不是参数，是家里那口热乎的东西。", "body": "0-3秒先给提醒或新闻感字卡；3-8秒拍透明动作、包装细节或备餐流程；8-15秒收在“看得见才安心”的表达。", "visual": "砂锅、汤碗、厨房暖光、慢炖热气。", "guide": "重点拍家庭照顾感，不碰夸张食疗表述。"}, {"industry": "冲调品", "fit": "适合工位、宿舍、夜间陪伴和即刻热饮场景。 这条热点更适合把“吉隆泥石流救援与灾后关注”转成可立即试拍的内容入口。", "hook": "吉隆泥石流救援与灾后关注别等刷完才找精神，先把手边这一杯冲开。", "body": "0-3秒先给提醒或新闻感字卡；3-8秒拍透明动作、包装细节或备餐流程；8-15秒收在“看得见才安心”的表达。", "visual": "马克杯、热水、搅拌、杯口热气。", "guide": "抓住3秒冲开瞬间，最容易留人。"}, {"industry": "乳制品", "fit": "适合早餐、放学后、运动后和夜晚安稳感内容。 这条热点更适合把“吉隆泥石流救援与灾后关注”转成可立即试拍的内容入口。", "hook": "吉隆泥石流救援与灾后关注这波最容易让人代入的，其实是手边那一口更稳的日常补给。", "body": "0-3秒先给提醒或新闻感字卡；3-8秒拍透明动作、包装细节或备餐流程；8-15秒收在“看得见才安心”的表达。", "visual": "冰箱开门、玻璃杯、吸管、早餐桌。", "guide": "更适合真实纪实感，不要广告片腔调。"}]}, {"rank": 5, "category": "社会", "conversion": "安心选择", "name": "食品保温袋甲醛超标提醒", "window": "未来10-15天", "rationale": "和“入口安全”高度相关，用户会主动寻找更稳妥的日常选择。", "relevance": "适合做包装、材质、储存与使用细节表达。", "anchor": "新闻议题 + 透明动作 + 安心感镜头", "summary": "和“入口安全”高度相关，用户会主动寻找更稳妥的日常选择。", "risk": "公共议题只能做透明、提醒、关怀和陪伴，不能借事件直接促销。", "evidence": ["近7天民生、安全、监管类热点保持高讨论度。", "这类话题天然带有“信任”“安心”“透明”需求。", "食品客户更适合借“看得见、查得到、买得明白”的表达。", "当前优先建议试拍：母婴食品、保健食品、粮油调味速食。"], "versions": [{"industry": "母婴食品", "fit": "适合“给孩子这一口先选稳妥的”安心表达。 这条热点更适合把“食品保温袋甲醛超标提醒”转成可立即试拍的内容入口。", "hook": "食品保温袋甲醛超标提醒给孩子吃的这一口，先别讲口味，先把安心感拍清楚。", "body": "0-3秒先给提醒或新闻感字卡；3-8秒拍透明动作、包装细节或备餐流程；8-15秒收在“看得见才安心”的表达。", "visual": "儿童餐桌、书包、包装细节、家长手部。", "guide": "只做透明和照顾感，不碰功效焦虑。"}, {"industry": "保健食品", "fit": "适合接日常状态管理、规律感与轻科普表达。 这条热点更适合把“食品保温袋甲醛超标提醒”转成可立即试拍的内容入口。", "hook": "食品保温袋甲醛超标提醒这波别先讲功效，先把你每天怎么把状态顾住拍出来。", "body": "0-3秒先给提醒或新闻感字卡；3-8秒拍透明动作、包装细节或备餐流程；8-15秒收在“看得见才安心”的表达。", "visual": "极简桌面、小瓶装、晨间或夜间灯光。", "guide": "只做日常管理心智，不碰疗效承诺。"}, {"industry": "粮油调味速食", "fit": "适合拍“十分钟上桌”“先把一顿饭做稳”的效率内容。 这条热点更适合把“食品保温袋甲醛超标提醒”转成可立即试拍的内容入口。", "hook": "食品保温袋甲醛超标提醒别空聊趋势，先拍一顿十分钟能上桌的真实吃法。", "body": "0-3秒先给提醒或新闻感字卡；3-8秒拍透明动作、包装细节或备餐流程；8-15秒收在“看得见才安心”的表达。", "visual": "厨房灶台、起锅、拌面或热饭上桌。", "guide": "优先用真实厨房速度感，不要堆复杂花活。"}]}, {"rank": 1, "category": "公共科技", "conversion": "场景种草", "name": "华为Mate XT 2与鸿蒙7发布会", "window": "未来7-10天", "rationale": "新品发布带来的围观流量非常强，最适合切到工位或客厅的陪看场景。", "relevance": "适合做“我边看发布会边把这一口安排上”的内容。", "anchor": "新品围观 + 工位追更 + 科技感桌面", "summary": "新品发布带来的围观流量非常强，最适合切到工位或客厅的陪看场景。", "risk": "不要虚构联名或官方合作，不要夸大科技背书。", "evidence": ["近7天新品发布、AI政策、产业规划连续刷屏。", "用户愿意围观新技术，但真正能转化的是“陪看、陪聊、陪工作”的日常场景。", "食品行业更适合切到工位桌面、夜间追发布会、效率节奏感。", "当前优先建议试拍：冲调品、茶叶、休闲食品。"], "versions": [{"industry": "冲调品", "fit": "适合工位、宿舍、夜间陪伴和即刻热饮场景。 这条热点更适合把“华为Mate XT 2与”转成可立即试拍的内容入口。", "hook": "华为Mate XT 2与鸿蒙7发布会别等刷完才找精神，先把手边这一杯冲开。", "body": "0-3秒先给发布会、工位或新鲜词条；3-8秒切到热饮、零食或桌面陪看动作；8-15秒落在“边看边聊边跟上节奏”的氛围。", "visual": "马克杯、热水、搅拌、杯口热气。", "guide": "抓住3秒冲开瞬间，最容易留人。"}, {"industry": "茶叶", "fit": "适合把节奏放慢，拍出一口热气和松弛感。 这条热点更适合把“华为Mate XT 2与”转成可立即试拍的内容入口。", "hook": "华为Mate XT 2与鸿蒙7发布会别急着分析，先给观众一杯能把节奏慢下来的热茶。", "body": "0-3秒先给发布会、工位或新鲜词条；3-8秒切到热饮、零食或桌面陪看动作；8-15秒落在“边看边聊边跟上节奏”的氛围。", "visual": "注水、茶汤、玻璃杯、木桌、热气。", "guide": "以氛围和质感取胜，不必堆知识。"}, {"industry": "休闲食品", "fit": "适合承接陪看、破冰、分享和轻松嘴替场景。 这条热点更适合把“华为Mate XT 2与”转成可立即试拍的内容入口。", "hook": "华为Mate XT 2与鸿蒙7发布会一上强度，先别讲卖点，把边看边吃那一下拍出来就够了。", "body": "0-3秒先给发布会、工位或新鲜词条；3-8秒切到热饮、零食或桌面陪看动作；8-15秒落在“边看边聊边跟上节奏”的氛围。", "visual": "拆袋、多人分食、沙发或工位桌面。", "guide": "用手部互动和咀嚼声强化停留感。"}]}, {"rank": 2, "category": "公共科技", "conversion": "新鲜感承接", "name": "小米折叠屏与LPDDR6商用首发", "window": "未来7-10天", "rationale": "科技新鲜感会自然带出“试新、拆箱、围观”的内容需求。", "relevance": "适合拍年轻工位与夜间追更场景。", "anchor": "新品围观 + 工位追更 + 科技感桌面", "summary": "科技新鲜感会自然带出“试新、拆箱、围观”的内容需求。", "risk": "不要虚构联名或官方合作，不要夸大科技背书。", "evidence": ["近7天新品发布、AI政策、产业规划连续刷屏。", "用户愿意围观新技术，但真正能转化的是“陪看、陪聊、陪工作”的日常场景。", "食品行业更适合切到工位桌面、夜间追发布会、效率节奏感。", "当前优先建议试拍：冲调品、休闲食品、乳制品。"], "versions": [{"industry": "冲调品", "fit": "适合工位、宿舍、夜间陪伴和即刻热饮场景。 这条热点更适合把“小米折叠屏与LPDDR6”转成可立即试拍的内容入口。", "hook": "小米折叠屏与LPDDR6商用首发别等刷完才找精神，先把手边这一杯冲开。", "body": "0-3秒先给发布会、工位或新鲜词条；3-8秒切到热饮、零食或桌面陪看动作；8-15秒落在“边看边聊边跟上节奏”的氛围。", "visual": "马克杯、热水、搅拌、杯口热气。", "guide": "抓住3秒冲开瞬间，最容易留人。"}, {"industry": "休闲食品", "fit": "适合承接陪看、破冰、分享和轻松嘴替场景。 这条热点更适合把“小米折叠屏与LPDDR6”转成可立即试拍的内容入口。", "hook": "小米折叠屏与LPDDR6商用首发一上强度，先别讲卖点，把边看边吃那一下拍出来就够了。", "body": "0-3秒先给发布会、工位或新鲜词条；3-8秒切到热饮、零食或桌面陪看动作；8-15秒落在“边看边聊边跟上节奏”的氛围。", "visual": "拆袋、多人分食、沙发或工位桌面。", "guide": "用手部互动和咀嚼声强化停留感。"}, {"industry": "乳制品", "fit": "适合早餐、放学后、运动后和夜晚安稳感内容。 这条热点更适合把“小米折叠屏与LPDDR6”转成可立即试拍的内容入口。", "hook": "小米折叠屏与LPDDR6商用首发这波最容易让人代入的，其实是手边那一口更稳的日常补给。", "body": "0-3秒先给发布会、工位或新鲜词条；3-8秒切到热饮、零食或桌面陪看动作；8-15秒落在“边看边聊边跟上节奏”的氛围。", "visual": "冰箱开门、玻璃杯、吸管、早餐桌。", "guide": "更适合真实纪实感，不要广告片腔调。"}]}, {"rank": 3, "category": "公共科技", "conversion": "未来感表达", "name": "信息通信行业“十五五”规划发布", "window": "未来10-15天", "rationale": "规划类内容自带“下一阶段会更快更稳”的期待。", "relevance": "适合把品牌表达往“长期、耐心、稳步升级”上引。", "anchor": "新品围观 + 工位追更 + 科技感桌面", "summary": "规划类内容自带“下一阶段会更快更稳”的期待。", "risk": "不要虚构联名或官方合作，不要夸大科技背书。", "evidence": ["近7天新品发布、AI政策、产业规划连续刷屏。", "用户愿意围观新技术，但真正能转化的是“陪看、陪聊、陪工作”的日常场景。", "食品行业更适合切到工位桌面、夜间追发布会、效率节奏感。", "当前优先建议试拍：茶叶、膳食营养、保健食品。"], "versions": [{"industry": "茶叶", "fit": "适合把节奏放慢，拍出一口热气和松弛感。 这条热点更适合把“信息通信行业“十五五”规”转成可立即试拍的内容入口。", "hook": "信息通信行业“十五五”规划发布别急着分析，先给观众一杯能把节奏慢下来的热茶。", "body": "0-3秒先给发布会、工位或新鲜词条；3-8秒切到热饮、零食或桌面陪看动作；8-15秒落在“边看边聊边跟上节奏”的氛围。", "visual": "注水、茶汤、玻璃杯、木桌、热气。", "guide": "以氛围和质感取胜，不必堆知识。"}, {"industry": "膳食营养", "fit": "适合接状态感、轻补给和规律摄入。 这条热点更适合把“信息通信行业“十五五”规”转成可立即试拍的内容入口。", "hook": "信息通信行业“十五五”规划发布别只围观热搜，真正能拍进日常的是把状态慢慢补回来。", "body": "0-3秒先给发布会、工位或新鲜词条；3-8秒切到热饮、零食或桌面陪看动作；8-15秒落在“边看边聊边跟上节奏”的氛围。", "visual": "随手杯、通勤包、运动后或工位桌面。", "guide": "突出节奏管理，避免夸大功能。"}, {"industry": "保健食品", "fit": "适合接日常状态管理、规律感与轻科普表达。 这条热点更适合把“信息通信行业“十五五”规”转成可立即试拍的内容入口。", "hook": "信息通信行业“十五五”规划发布这波别先讲功效，先把你每天怎么把状态顾住拍出来。", "body": "0-3秒先给发布会、工位或新鲜词条；3-8秒切到热饮、零食或桌面陪看动作；8-15秒落在“边看边聊边跟上节奏”的氛围。", "visual": "极简桌面、小瓶装、晨间或夜间灯光。", "guide": "只做日常管理心智，不碰疗效承诺。"}]}, {"rank": 4, "category": "公共科技", "conversion": "创业效率", "name": "AI中小企业创业支持计划出炉", "window": "未来10-15天", "rationale": "创业者与上班族都容易被“效率、活力、持续开工”吸引。", "relevance": "适合工位热饮、通勤补给和精神状态内容。", "anchor": "新品围观 + 工位追更 + 科技感桌面", "summary": "创业者与上班族都容易被“效率、活力、持续开工”吸引。", "risk": "不要虚构联名或官方合作，不要夸大科技背书。", "evidence": ["近7天新品发布、AI政策、产业规划连续刷屏。", "用户愿意围观新技术，但真正能转化的是“陪看、陪聊、陪工作”的日常场景。", "食品行业更适合切到工位桌面、夜间追发布会、效率节奏感。", "当前优先建议试拍：冲调品、膳食营养、茶叶。"], "versions": [{"industry": "冲调品", "fit": "适合工位、宿舍、夜间陪伴和即刻热饮场景。 这条热点更适合把“AI中小企业创业支持计划”转成可立即试拍的内容入口。", "hook": "AI中小企业创业支持计划出炉别等刷完才找精神，先把手边这一杯冲开。", "body": "0-3秒先给发布会、工位或新鲜词条；3-8秒切到热饮、零食或桌面陪看动作；8-15秒落在“边看边聊边跟上节奏”的氛围。", "visual": "马克杯、热水、搅拌、杯口热气。", "guide": "抓住3秒冲开瞬间，最容易留人。"}, {"industry": "膳食营养", "fit": "适合接状态感、轻补给和规律摄入。 这条热点更适合把“AI中小企业创业支持计划”转成可立即试拍的内容入口。", "hook": "AI中小企业创业支持计划出炉别只围观热搜，真正能拍进日常的是把状态慢慢补回来。", "body": "0-3秒先给发布会、工位或新鲜词条；3-8秒切到热饮、零食或桌面陪看动作；8-15秒落在“边看边聊边跟上节奏”的氛围。", "visual": "随手杯、通勤包、运动后或工位桌面。", "guide": "突出节奏管理，避免夸大功能。"}, {"industry": "茶叶", "fit": "适合把节奏放慢，拍出一口热气和松弛感。 这条热点更适合把“AI中小企业创业支持计划”转成可立即试拍的内容入口。", "hook": "AI中小企业创业支持计划出炉别急着分析，先给观众一杯能把节奏慢下来的热茶。", "body": "0-3秒先给发布会、工位或新鲜词条；3-8秒切到热饮、零食或桌面陪看动作；8-15秒落在“边看边聊边跟上节奏”的氛围。", "visual": "注水、茶汤、玻璃杯、木桌、热气。", "guide": "以氛围和质感取胜，不必堆知识。"}]}, {"rank": 5, "category": "公共科技", "conversion": "夜间陪伴", "name": "AI短剧走热与AI肖像规则讨论", "window": "未来10-15天", "rationale": "围绕AI内容的讨论会持续发酵，但用户真正停留的是“今晚刷点什么”。", "relevance": "适合做观剧、夜聊与屏幕前的陪伴消费。", "anchor": "新品围观 + 工位追更 + 科技感桌面", "summary": "围绕AI内容的讨论会持续发酵，但用户真正停留的是“今晚刷点什么”。", "risk": "不要虚构联名或官方合作，不要夸大科技背书。", "evidence": ["近7天新品发布、AI政策、产业规划连续刷屏。", "用户愿意围观新技术，但真正能转化的是“陪看、陪聊、陪工作”的日常场景。", "食品行业更适合切到工位桌面、夜间追发布会、效率节奏感。", "当前优先建议试拍：休闲食品、葡萄酒、洋酒。"], "versions": [{"industry": "休闲食品", "fit": "适合承接陪看、破冰、分享和轻松嘴替场景。 这条热点更适合把“AI短剧走热与AI肖像规”转成可立即试拍的内容入口。", "hook": "AI短剧走热与AI肖像规则讨论一上强度，先别讲卖点，把边看边吃那一下拍出来就够了。", "body": "0-3秒先给发布会、工位或新鲜词条；3-8秒切到热饮、零食或桌面陪看动作；8-15秒落在“边看边聊边跟上节奏”的氛围。", "visual": "拆袋、多人分食、沙发或工位桌面。", "guide": "用手部互动和咀嚼声强化停留感。"}, {"industry": "葡萄酒", "fit": "适合周末、观影、双人聊天和慢节奏氛围。 这条热点更适合把“AI短剧走热与AI肖像规”转成可立即试拍的内容入口。", "hook": "AI短剧走热与AI肖像规则讨论真正有画面的，不是热搜本身，而是这杯慢慢醒开的周末感。", "body": "0-3秒先给发布会、工位或新鲜词条；3-8秒切到热饮、零食或桌面陪看动作；8-15秒落在“边看边聊边跟上节奏”的氛围。", "visual": "高脚杯、倒酒、暖光餐桌、电影屏幕光。", "guide": "更适合质感路线，不宜过度热闹。"}, {"industry": "洋酒", "fit": "适合更都市、更夜生活一点的观影或小聚氛围。 这条热点更适合把“AI短剧走热与AI肖像规”转成可立即试拍的内容入口。", "hook": "AI短剧走热与AI肖像规则讨论镜头别只给屏幕，把冰块落下去那一下也拍进去。", "body": "0-3秒先给发布会、工位或新鲜词条；3-8秒切到热饮、零食或桌面陪看动作；8-15秒落在“边看边聊边跟上节奏”的氛围。", "visual": "矮杯、冰球、反光桌面、都市夜灯。", "guide": "只做成年人小酌氛围，不做豪饮。"}]}, {"rank": 1, "category": "娱乐", "conversion": "话题讨论", "name": "花儿与少年2026“落水拷问”片段出圈", "window": "未来7-10天", "rationale": "轻冲突、轻八卦、轻吐槽最容易带出陪看和边聊边吃场景。", "relevance": "适合做“刷到这一段时我桌上有什么”的生活化表达。", "anchor": "综艺切片 + 演唱会氛围 + 夜间陪伴", "summary": "轻冲突、轻八卦、轻吐槽最容易带出陪看和边聊边吃场景。", "risk": "不要直接搬运明星或影视素材，保留“围观氛围”即可。", "evidence": ["近7天综艺、演唱会、影视与明星个人议题持续上升。", "这类内容天然适合做“陪看陪听陪聊”型种草。", "食品行业最适合切到观影、刷综、看演出的陪伴消费场景。", "当前优先建议试拍：休闲食品、冲调品、茶叶。"], "versions": [{"industry": "休闲食品", "fit": "适合承接陪看、破冰、分享和轻松嘴替场景。 这条热点更适合把“花儿与少年2026“落水”转成可立即试拍的内容入口。", "hook": "花儿与少年2026“落水拷问”片段出一上强度，先别讲卖点，把边看边吃那一下拍出来就够了。", "body": "0-3秒先给综艺、演唱会或观影情绪；3-8秒切陪看、分享或小酌动作；8-15秒收在“今晚这一口刚刚好”的陪伴感。", "visual": "拆袋、多人分食、沙发或工位桌面。", "guide": "用手部互动和咀嚼声强化停留感。"}, {"industry": "冲调品", "fit": "适合工位、宿舍、夜间陪伴和即刻热饮场景。 这条热点更适合把“花儿与少年2026“落水”转成可立即试拍的内容入口。", "hook": "花儿与少年2026“落水拷问”片段出别等刷完才找精神，先把手边这一杯冲开。", "body": "0-3秒先给综艺、演唱会或观影情绪；3-8秒切陪看、分享或小酌动作；8-15秒收在“今晚这一口刚刚好”的陪伴感。", "visual": "马克杯、热水、搅拌、杯口热气。", "guide": "抓住3秒冲开瞬间，最容易留人。"}, {"industry": "茶叶", "fit": "适合把节奏放慢，拍出一口热气和松弛感。 这条热点更适合把“花儿与少年2026“落水”转成可立即试拍的内容入口。", "hook": "花儿与少年2026“落水拷问”片段出别急着分析，先给观众一杯能把节奏慢下来的热茶。", "body": "0-3秒先给综艺、演唱会或观影情绪；3-8秒切陪看、分享或小酌动作；8-15秒收在“今晚这一口刚刚好”的陪伴感。", "visual": "注水、茶汤、玻璃杯、木桌、热气。", "guide": "以氛围和质感取胜，不必堆知识。"}]}, {"rank": 2, "category": "娱乐", "conversion": "综艺陪看", "name": "披荆斩棘2026二公舞台再出圈", "window": "未来7-10天", "rationale": "舞台感、团综感和群体讨论都很强，适合多人陪看场景。", "relevance": "适合接夜晚聚会、追综和桌边分享。", "anchor": "综艺切片 + 演唱会氛围 + 夜间陪伴", "summary": "舞台感、团综感和群体讨论都很强，适合多人陪看场景。", "risk": "不要直接搬运明星或影视素材，保留“围观氛围”即可。", "evidence": ["近7天综艺、演唱会、影视与明星个人议题持续上升。", "这类内容天然适合做“陪看陪听陪聊”型种草。", "食品行业最适合切到观影、刷综、看演出的陪伴消费场景。", "当前优先建议试拍：休闲食品、啤酒、乳制品。"], "versions": [{"industry": "休闲食品", "fit": "适合承接陪看、破冰、分享和轻松嘴替场景。 这条热点更适合把“披荆斩棘2026二公舞台”转成可立即试拍的内容入口。", "hook": "披荆斩棘2026二公舞台再出圈一上强度，先别讲卖点，把边看边吃那一下拍出来就够了。", "body": "0-3秒先给综艺、演唱会或观影情绪；3-8秒切陪看、分享或小酌动作；8-15秒收在“今晚这一口刚刚好”的陪伴感。", "visual": "拆袋、多人分食、沙发或工位桌面。", "guide": "用手部互动和咀嚼声强化停留感。"}, {"industry": "啤酒", "fit": "适合看球、演出后夜聊和朋友小聚的成年人氛围。 这条热点更适合把“披荆斩棘2026二公舞台”转成可立即试拍的内容入口。", "hook": "披荆斩棘2026二公舞台再出圈一上情绪，真正懂氛围的人已经先把冰好的这一杯拿稳了。", "body": "0-3秒先给综艺、演唱会或观影情绪；3-8秒切陪看、分享或小酌动作；8-15秒收在“今晚这一口刚刚好”的陪伴感。", "visual": "开罐、气泡、冰杯、成年朋友围桌。", "guide": "仅限成年人场景，避免过量饮酒表达。"}, {"industry": "乳制品", "fit": "适合早餐、放学后、运动后和夜晚安稳感内容。 这条热点更适合把“披荆斩棘2026二公舞台”转成可立即试拍的内容入口。", "hook": "披荆斩棘2026二公舞台再出圈这波最容易让人代入的，其实是手边那一口更稳的日常补给。", "body": "0-3秒先给综艺、演唱会或观影情绪；3-8秒切陪看、分享或小酌动作；8-15秒收在“今晚这一口刚刚好”的陪伴感。", "visual": "冰箱开门、玻璃杯、吸管、早餐桌。", "guide": "更适合真实纪实感，不要广告片腔调。"}]}, {"rank": 3, "category": "娱乐", "conversion": "情绪共鸣", "name": "王鸥独自养育孩子话题刷屏", "window": "未来7-10天", "rationale": "女性独立与情绪治愈类话题会带出很多自我照顾型内容。", "relevance": "适合拍一个人也能把日子过得很稳的轻治愈内容。", "anchor": "综艺切片 + 演唱会氛围 + 夜间陪伴", "summary": "女性独立与情绪治愈类话题会带出很多自我照顾型内容。", "risk": "不要直接搬运明星或影视素材，保留“围观氛围”即可。", "evidence": ["近7天综艺、演唱会、影视与明星个人议题持续上升。", "这类内容天然适合做“陪看陪听陪聊”型种草。", "食品行业最适合切到观影、刷综、看演出的陪伴消费场景。", "当前优先建议试拍：茶叶、乳制品、冲调品。"], "versions": [{"industry": "茶叶", "fit": "适合把节奏放慢，拍出一口热气和松弛感。 这条热点更适合把“王鸥独自养育孩子话题刷屏”转成可立即试拍的内容入口。", "hook": "王鸥独自养育孩子话题刷屏别急着分析，先给观众一杯能把节奏慢下来的热茶。", "body": "0-3秒先给综艺、演唱会或观影情绪；3-8秒切陪看、分享或小酌动作；8-15秒收在“今晚这一口刚刚好”的陪伴感。", "visual": "注水、茶汤、玻璃杯、木桌、热气。", "guide": "以氛围和质感取胜，不必堆知识。"}, {"industry": "乳制品", "fit": "适合早餐、放学后、运动后和夜晚安稳感内容。 这条热点更适合把“王鸥独自养育孩子话题刷屏”转成可立即试拍的内容入口。", "hook": "王鸥独自养育孩子话题刷屏这波最容易让人代入的，其实是手边那一口更稳的日常补给。", "body": "0-3秒先给综艺、演唱会或观影情绪；3-8秒切陪看、分享或小酌动作；8-15秒收在“今晚这一口刚刚好”的陪伴感。", "visual": "冰箱开门、玻璃杯、吸管、早餐桌。", "guide": "更适合真实纪实感，不要广告片腔调。"}, {"industry": "冲调品", "fit": "适合工位、宿舍、夜间陪伴和即刻热饮场景。 这条热点更适合把“王鸥独自养育孩子话题刷屏”转成可立即试拍的内容入口。", "hook": "王鸥独自养育孩子话题刷屏别等刷完才找精神，先把手边这一杯冲开。", "body": "0-3秒先给综艺、演唱会或观影情绪；3-8秒切陪看、分享或小酌动作；8-15秒收在“今晚这一口刚刚好”的陪伴感。", "visual": "马克杯、热水、搅拌、杯口热气。", "guide": "抓住3秒冲开瞬间，最容易留人。"}]}, {"rank": 4, "category": "娱乐", "conversion": "现场氛围", "name": "秋季演唱会扎堆开票与巡演热度", "window": "未来10-15天", "rationale": "演唱会内容天然带出出门前、看完后、和朋友聊起来的情绪延展。", "relevance": "适合做路上带什么、看完回家还想喝什么的内容。", "anchor": "综艺切片 + 演唱会氛围 + 夜间陪伴", "summary": "演唱会内容天然带出出门前、看完后、和朋友聊起来的情绪延展。", "risk": "不要直接搬运明星或影视素材，保留“围观氛围”即可。", "evidence": ["近7天综艺、演唱会、影视与明星个人议题持续上升。", "这类内容天然适合做“陪看陪听陪聊”型种草。", "食品行业最适合切到观影、刷综、看演出的陪伴消费场景。", "当前优先建议试拍：啤酒、休闲食品、洋酒。"], "versions": [{"industry": "啤酒", "fit": "适合看球、演出后夜聊和朋友小聚的成年人氛围。 这条热点更适合把“秋季演唱会扎堆开票与巡演”转成可立即试拍的内容入口。", "hook": "秋季演唱会扎堆开票与巡演热度一上情绪，真正懂氛围的人已经先把冰好的这一杯拿稳了。", "body": "0-3秒先给综艺、演唱会或观影情绪；3-8秒切陪看、分享或小酌动作；8-15秒收在“今晚这一口刚刚好”的陪伴感。", "visual": "开罐、气泡、冰杯、成年朋友围桌。", "guide": "仅限成年人场景，避免过量饮酒表达。"}, {"industry": "休闲食品", "fit": "适合承接陪看、破冰、分享和轻松嘴替场景。 这条热点更适合把“秋季演唱会扎堆开票与巡演”转成可立即试拍的内容入口。", "hook": "秋季演唱会扎堆开票与巡演热度一上强度，先别讲卖点，把边看边吃那一下拍出来就够了。", "body": "0-3秒先给综艺、演唱会或观影情绪；3-8秒切陪看、分享或小酌动作；8-15秒收在“今晚这一口刚刚好”的陪伴感。", "visual": "拆袋、多人分食、沙发或工位桌面。", "guide": "用手部互动和咀嚼声强化停留感。"}, {"industry": "洋酒", "fit": "适合更都市、更夜生活一点的观影或小聚氛围。 这条热点更适合把“秋季演唱会扎堆开票与巡演”转成可立即试拍的内容入口。", "hook": "秋季演唱会扎堆开票与巡演热度镜头别只给屏幕，把冰块落下去那一下也拍进去。", "body": "0-3秒先给综艺、演唱会或观影情绪；3-8秒切陪看、分享或小酌动作；8-15秒收在“今晚这一口刚刚好”的陪伴感。", "visual": "矮杯、冰球、反光桌面、都市夜灯。", "guide": "只做成年人小酌氛围，不做豪饮。"}]}, {"rank": 5, "category": "娱乐", "conversion": "周末观影", "name": "暑期档票房收官叠加新片上映周末", "window": "未来7-10天", "rationale": "电影相关热度会把内容推向“周末看什么、边看边吃什么”的决策场景。", "relevance": "适合单人居家和双人观影两种版本。", "anchor": "综艺切片 + 演唱会氛围 + 夜间陪伴", "summary": "电影相关热度会把内容推向“周末看什么、边看边吃什么”的决策场景。", "risk": "不要直接搬运明星或影视素材，保留“围观氛围”即可。", "evidence": ["近7天综艺、演唱会、影视与明星个人议题持续上升。", "这类内容天然适合做“陪看陪听陪聊”型种草。", "食品行业最适合切到观影、刷综、看演出的陪伴消费场景。", "当前优先建议试拍：休闲食品、冲调品、葡萄酒。"], "versions": [{"industry": "休闲食品", "fit": "适合承接陪看、破冰、分享和轻松嘴替场景。 这条热点更适合把“暑期档票房收官叠加新片上”转成可立即试拍的内容入口。", "hook": "暑期档票房收官叠加新片上映周末一上强度，先别讲卖点，把边看边吃那一下拍出来就够了。", "body": "0-3秒先给综艺、演唱会或观影情绪；3-8秒切陪看、分享或小酌动作；8-15秒收在“今晚这一口刚刚好”的陪伴感。", "visual": "拆袋、多人分食、沙发或工位桌面。", "guide": "用手部互动和咀嚼声强化停留感。"}, {"industry": "冲调品", "fit": "适合工位、宿舍、夜间陪伴和即刻热饮场景。 这条热点更适合把“暑期档票房收官叠加新片上”转成可立即试拍的内容入口。", "hook": "暑期档票房收官叠加新片上映周末别等刷完才找精神，先把手边这一杯冲开。", "body": "0-3秒先给综艺、演唱会或观影情绪；3-8秒切陪看、分享或小酌动作；8-15秒收在“今晚这一口刚刚好”的陪伴感。", "visual": "马克杯、热水、搅拌、杯口热气。", "guide": "抓住3秒冲开瞬间，最容易留人。"}, {"industry": "葡萄酒", "fit": "适合周末、观影、双人聊天和慢节奏氛围。 这条热点更适合把“暑期档票房收官叠加新片上”转成可立即试拍的内容入口。", "hook": "暑期档票房收官叠加新片上映周末真正有画面的，不是热搜本身，而是这杯慢慢醒开的周末感。", "body": "0-3秒先给综艺、演唱会或观影情绪；3-8秒切陪看、分享或小酌动作；8-15秒收在“今晚这一口刚刚好”的陪伴感。", "visual": "高脚杯、倒酒、暖光餐桌、电影屏幕光。", "guide": "更适合质感路线，不宜过度热闹。"}]}, {"rank": 1, "category": "家庭", "conversion": "换季照顾", "name": "秋季呼吸道提醒带火家庭热饮备货", "window": "未来10-15天", "rationale": "换季时用户更愿意看“怎么把家里照顾好”的内容，而不是硬核知识。", "relevance": "适合热饮、热汤、规律补给和家庭厨房。", "anchor": "家里那一口 + 餐桌热气 + 轻照顾感", "summary": "换季时用户更愿意看“怎么把家里照顾好”的内容，而不是硬核知识。", "risk": "不要制造家庭焦虑，不要夸大功效或育儿结果。", "evidence": ["近7天家庭照顾、预算、外卖安全与秋季备货话题同时升温。", "家庭类内容用户更在意“真实有用、少焦虑、能马上照着做”。", "食品行业更适合拍居家、接娃、备餐、周末出门前的真实动作。", "当前优先建议试拍：传统滋补、冲调品、海外保健食品。"], "versions": [{"industry": "传统滋补", "fit": "适合接“家里开始煮点热乎的”这类照顾感。 这条热点更适合把“秋季呼吸道提醒带火家庭热”转成可立即试拍的内容入口。", "hook": "秋季呼吸道提醒带火家庭热饮备货到了这一步，最能打动人的不是参数，是家里那口热乎的东西。", "body": "0-3秒先给家里一个真实问题；3-8秒拍备餐、接娃或热饮动作；8-15秒落在“先把家里这一口顾好”这句。", "visual": "砂锅、汤碗、厨房暖光、慢炖热气。", "guide": "重点拍家庭照顾感，不碰夸张食疗表述。"}, {"industry": "冲调品", "fit": "适合工位、宿舍、夜间陪伴和即刻热饮场景。 这条热点更适合把“秋季呼吸道提醒带火家庭热”转成可立即试拍的内容入口。", "hook": "秋季呼吸道提醒带火家庭热饮备货别等刷完才找精神，先把手边这一杯冲开。", "body": "0-3秒先给家里一个真实问题；3-8秒拍备餐、接娃或热饮动作；8-15秒落在“先把家里这一口顾好”这句。", "visual": "马克杯、热水、搅拌、杯口热气。", "guide": "抓住3秒冲开瞬间，最容易留人。"}, {"industry": "海外保健食品", "fit": "适合讲规律、轻养成和换季自我管理。 这条热点更适合把“秋季呼吸道提醒带火家庭热”转成可立即试拍的内容入口。", "hook": "秋季呼吸道提醒带火家庭热饮备货别卷复杂方法，先把今天这一份怎么安排得更清楚。", "body": "0-3秒先给家里一个真实问题；3-8秒拍备餐、接娃或热饮动作；8-15秒落在“先把家里这一口顾好”这句。", "visual": "条包、简洁外盒、晨间打卡感。", "guide": "越克制越可信，避免跨境功效夸大。"}]}, {"rank": 2, "category": "家庭", "conversion": "家庭场景", "name": "放学后四点半加餐场景升温", "window": "未来10-15天", "rationale": "家长真正焦虑的是放学到晚饭前这段时间怎么过得顺。", "relevance": "适合接娃后、书包落桌后和小餐桌场景。", "anchor": "家里那一口 + 餐桌热气 + 轻照顾感", "summary": "家长真正焦虑的是放学到晚饭前这段时间怎么过得顺。", "risk": "不要制造家庭焦虑，不要夸大功效或育儿结果。", "evidence": ["近7天家庭照顾、预算、外卖安全与秋季备货话题同时升温。", "家庭类内容用户更在意“真实有用、少焦虑、能马上照着做”。", "食品行业更适合拍居家、接娃、备餐、周末出门前的真实动作。", "当前优先建议试拍：母婴食品、乳制品、粮油调味速食。"], "versions": [{"industry": "母婴食品", "fit": "适合“给孩子这一口先选稳妥的”安心表达。 这条热点更适合把“放学后四点半加餐场景升温”转成可立即试拍的内容入口。", "hook": "放学后四点半加餐场景升温给孩子吃的这一口，先别讲口味，先把安心感拍清楚。", "body": "0-3秒先给家里一个真实问题；3-8秒拍备餐、接娃或热饮动作；8-15秒落在“先把家里这一口顾好”这句。", "visual": "儿童餐桌、书包、包装细节、家长手部。", "guide": "只做透明和照顾感，不碰功效焦虑。"}, {"industry": "乳制品", "fit": "适合早餐、放学后、运动后和夜晚安稳感内容。 这条热点更适合把“放学后四点半加餐场景升温”转成可立即试拍的内容入口。", "hook": "放学后四点半加餐场景升温这波最容易让人代入的，其实是手边那一口更稳的日常补给。", "body": "0-3秒先给家里一个真实问题；3-8秒拍备餐、接娃或热饮动作；8-15秒落在“先把家里这一口顾好”这句。", "visual": "冰箱开门、玻璃杯、吸管、早餐桌。", "guide": "更适合真实纪实感，不要广告片腔调。"}, {"industry": "粮油调味速食", "fit": "适合拍“十分钟上桌”“先把一顿饭做稳”的效率内容。 这条热点更适合把“放学后四点半加餐场景升温”转成可立即试拍的内容入口。", "hook": "放学后四点半加餐场景升温别空聊趋势，先拍一顿十分钟能上桌的真实吃法。", "body": "0-3秒先给家里一个真实问题；3-8秒拍备餐、接娃或热饮动作；8-15秒落在“先把家里这一口顾好”这句。", "visual": "厨房灶台、起锅、拌面或热饭上桌。", "guide": "优先用真实厨房速度感，不要堆复杂花活。"}]}, {"rank": 3, "category": "家庭", "conversion": "出行备货", "name": "周末亲子秋游与徒步露营", "window": "未来10-15天", "rationale": "白露之后，带娃近郊出门与松弛亲子内容持续升温。", "relevance": "适合拍出门前抓一把、包里带一件、到点就吃的内容。", "anchor": "家里那一口 + 餐桌热气 + 轻照顾感", "summary": "白露之后，带娃近郊出门与松弛亲子内容持续升温。", "risk": "不要制造家庭焦虑，不要夸大功效或育儿结果。", "evidence": ["近7天家庭照顾、预算、外卖安全与秋季备货话题同时升温。", "家庭类内容用户更在意“真实有用、少焦虑、能马上照着做”。", "食品行业更适合拍居家、接娃、备餐、周末出门前的真实动作。", "当前优先建议试拍：休闲食品、乳制品、冲调品。"], "versions": [{"industry": "休闲食品", "fit": "适合承接陪看、破冰、分享和轻松嘴替场景。 这条热点更适合把“周末亲子秋游与徒步露营”转成可立即试拍的内容入口。", "hook": "周末亲子秋游与徒步露营一上强度，先别讲卖点，把边看边吃那一下拍出来就够了。", "body": "0-3秒先给家里一个真实问题；3-8秒拍备餐、接娃或热饮动作；8-15秒落在“先把家里这一口顾好”这句。", "visual": "拆袋、多人分食、沙发或工位桌面。", "guide": "用手部互动和咀嚼声强化停留感。"}, {"industry": "乳制品", "fit": "适合早餐、放学后、运动后和夜晚安稳感内容。 这条热点更适合把“周末亲子秋游与徒步露营”转成可立即试拍的内容入口。", "hook": "周末亲子秋游与徒步露营这波最容易让人代入的，其实是手边那一口更稳的日常补给。", "body": "0-3秒先给家里一个真实问题；3-8秒拍备餐、接娃或热饮动作；8-15秒落在“先把家里这一口顾好”这句。", "visual": "冰箱开门、玻璃杯、吸管、早餐桌。", "guide": "更适合真实纪实感，不要广告片腔调。"}, {"industry": "冲调品", "fit": "适合工位、宿舍、夜间陪伴和即刻热饮场景。 这条热点更适合把“周末亲子秋游与徒步露营”转成可立即试拍的内容入口。", "hook": "周末亲子秋游与徒步露营别等刷完才找精神，先把手边这一杯冲开。", "body": "0-3秒先给家里一个真实问题；3-8秒拍备餐、接娃或热饮动作；8-15秒落在“先把家里这一口顾好”这句。", "visual": "马克杯、热水、搅拌、杯口热气。", "guide": "抓住3秒冲开瞬间，最容易留人。"}]}, {"rank": 4, "category": "家庭", "conversion": "安心替代", "name": "外卖自查与家庭厨房安心感", "window": "未来10-15天", "rationale": "当外卖安全成为讨论焦点，用户会重新回到“家里自己做点什么”。", "relevance": "适合拍食材、起锅、打包盒和台面清洁感。", "anchor": "家里那一口 + 餐桌热气 + 轻照顾感", "summary": "当外卖安全成为讨论焦点，用户会重新回到“家里自己做点什么”。", "risk": "不要制造家庭焦虑，不要夸大功效或育儿结果。", "evidence": ["近7天家庭照顾、预算、外卖安全与秋季备货话题同时升温。", "家庭类内容用户更在意“真实有用、少焦虑、能马上照着做”。", "食品行业更适合拍居家、接娃、备餐、周末出门前的真实动作。", "当前优先建议试拍：生鲜、粮油调味速食、母婴食品。"], "versions": [{"industry": "生鲜", "fit": "最适合把趋势拍成切开、下锅、上桌的真实动作。 这条热点更适合把“外卖自查与家庭厨房安心感”转成可立即试拍的内容入口。", "hook": "外卖自查与家庭厨房安心感别光说热度，直接把切开、下锅、第一口端上桌。", "body": "0-3秒先给家里一个真实问题；3-8秒拍备餐、接娃或热饮动作；8-15秒落在“先把家里这一口顾好”这句。", "visual": "砧板、锅气、食材纹理、热菜上桌。", "guide": "先拍食材状态，再落商品信息。"}, {"industry": "粮油调味速食", "fit": "适合拍“十分钟上桌”“先把一顿饭做稳”的效率内容。 这条热点更适合把“外卖自查与家庭厨房安心感”转成可立即试拍的内容入口。", "hook": "外卖自查与家庭厨房安心感别空聊趋势，先拍一顿十分钟能上桌的真实吃法。", "body": "0-3秒先给家里一个真实问题；3-8秒拍备餐、接娃或热饮动作；8-15秒落在“先把家里这一口顾好”这句。", "visual": "厨房灶台、起锅、拌面或热饭上桌。", "guide": "优先用真实厨房速度感，不要堆复杂花活。"}, {"industry": "母婴食品", "fit": "适合“给孩子这一口先选稳妥的”安心表达。 这条热点更适合把“外卖自查与家庭厨房安心感”转成可立即试拍的内容入口。", "hook": "外卖自查与家庭厨房安心感给孩子吃的这一口，先别讲口味，先把安心感拍清楚。", "body": "0-3秒先给家里一个真实问题；3-8秒拍备餐、接娃或热饮动作；8-15秒落在“先把家里这一口顾好”这句。", "visual": "儿童餐桌、书包、包装细节、家长手部。", "guide": "只做透明和照顾感，不碰功效焦虑。"}]}, {"rank": 5, "category": "家庭", "conversion": "理性消费", "name": "开学季家庭预算与囤货选择", "window": "未来10-15天", "rationale": "校服、餐费、零食、通勤都在加总，用户更想看“怎么买更稳妥”。", "relevance": "适合做家庭备货和性价比表达。", "anchor": "家里那一口 + 餐桌热气 + 轻照顾感", "summary": "校服、餐费、零食、通勤都在加总，用户更想看“怎么买更稳妥”。", "risk": "不要制造家庭焦虑，不要夸大功效或育儿结果。", "evidence": ["近7天家庭照顾、预算、外卖安全与秋季备货话题同时升温。", "家庭类内容用户更在意“真实有用、少焦虑、能马上照着做”。", "食品行业更适合拍居家、接娃、备餐、周末出门前的真实动作。", "当前优先建议试拍：冲调品、粮油调味速食、休闲食品。"], "versions": [{"industry": "冲调品", "fit": "适合工位、宿舍、夜间陪伴和即刻热饮场景。 这条热点更适合把“开学季家庭预算与囤货选择”转成可立即试拍的内容入口。", "hook": "开学季家庭预算与囤货选择别等刷完才找精神，先把手边这一杯冲开。", "body": "0-3秒先给家里一个真实问题；3-8秒拍备餐、接娃或热饮动作；8-15秒落在“先把家里这一口顾好”这句。", "visual": "马克杯、热水、搅拌、杯口热气。", "guide": "抓住3秒冲开瞬间，最容易留人。"}, {"industry": "粮油调味速食", "fit": "适合拍“十分钟上桌”“先把一顿饭做稳”的效率内容。 这条热点更适合把“开学季家庭预算与囤货选择”转成可立即试拍的内容入口。", "hook": "开学季家庭预算与囤货选择别空聊趋势，先拍一顿十分钟能上桌的真实吃法。", "body": "0-3秒先给家里一个真实问题；3-8秒拍备餐、接娃或热饮动作；8-15秒落在“先把家里这一口顾好”这句。", "visual": "厨房灶台、起锅、拌面或热饭上桌。", "guide": "优先用真实厨房速度感，不要堆复杂花活。"}, {"industry": "休闲食品", "fit": "适合承接陪看、破冰、分享和轻松嘴替场景。 这条热点更适合把“开学季家庭预算与囤货选择”转成可立即试拍的内容入口。", "hook": "开学季家庭预算与囤货选择一上强度，先别讲卖点，把边看边吃那一下拍出来就够了。", "body": "0-3秒先给家里一个真实问题；3-8秒拍备餐、接娃或热饮动作；8-15秒落在“先把家里这一口顾好”这句。", "visual": "拆袋、多人分食、沙发或工位桌面。", "guide": "用手部互动和咀嚼声强化停留感。"}]}, {"rank": 1, "category": "校园", "conversion": "公平感表达", "name": "深圳校服与自愿购买话题持续刷屏", "window": "未来10-15天", "rationale": "“统一、透明、不强制”会让家长和学生都产生很强代入感。", "relevance": "适合拍安心、朴素、真正有用的校园日常。", "anchor": "书包落桌 + 宿舍开箱 + 放学空档", "summary": "“统一、透明、不强制”会让家长和学生都产生很强代入感。", "risk": "未成年人场景严禁酒类表达；不要把食品说成提升学习表现的工具。", "evidence": ["开学第一周里，校服、课后服务、军训和宿舍情绪高频出现。", "校园话题的核心是公平、破冰、想家和放学后空档。", "食品行业最适合拍点心、热饮、分享和轻补给，不要硬讲教育。", "当前优先建议试拍：母婴食品、乳制品、粮油调味速食。"], "versions": [{"industry": "母婴食品", "fit": "适合“给孩子这一口先选稳妥的”安心表达。 这条热点更适合把“深圳校服与自愿购买话题持”转成可立即试拍的内容入口。", "hook": "深圳校服与自愿购买话题持续刷屏给孩子吃的这一口，先别讲口味，先把安心感拍清楚。", "body": "0-3秒先给书包落桌、宿舍灯亮或军训集合；3-8秒拍分享、开喝、开吃或上桌；8-15秒收在“这口让新学期没那么慌”的情绪上。", "visual": "儿童餐桌、书包、包装细节、家长手部。", "guide": "只做透明和照顾感，不碰功效焦虑。"}, {"industry": "乳制品", "fit": "适合早餐、放学后、运动后和夜晚安稳感内容。 这条热点更适合把“深圳校服与自愿购买话题持”转成可立即试拍的内容入口。", "hook": "深圳校服与自愿购买话题持续刷屏这波最容易让人代入的，其实是手边那一口更稳的日常补给。", "body": "0-3秒先给书包落桌、宿舍灯亮或军训集合；3-8秒拍分享、开喝、开吃或上桌；8-15秒收在“这口让新学期没那么慌”的情绪上。", "visual": "冰箱开门、玻璃杯、吸管、早餐桌。", "guide": "更适合真实纪实感，不要广告片腔调。"}, {"industry": "粮油调味速食", "fit": "适合拍“十分钟上桌”“先把一顿饭做稳”的效率内容。 这条热点更适合把“深圳校服与自愿购买话题持”转成可立即试拍的内容入口。", "hook": "深圳校服与自愿购买话题持续刷屏别空聊趋势，先拍一顿十分钟能上桌的真实吃法。", "body": "0-3秒先给书包落桌、宿舍灯亮或军训集合；3-8秒拍分享、开喝、开吃或上桌；8-15秒收在“这口让新学期没那么慌”的情绪上。", "visual": "厨房灶台、起锅、拌面或热饭上桌。", "guide": "优先用真实厨房速度感，不要堆复杂花活。"}]}, {"rank": 2, "category": "校园", "conversion": "节奏重排", "name": "课后服务调整带火放学后安排", "window": "未来10-15天", "rationale": "课后服务变化直接影响家长接娃、加餐和晚饭节奏。", "relevance": "适合拍真实放学空档，而不是抽象教育话题。", "anchor": "书包落桌 + 宿舍开箱 + 放学空档", "summary": "课后服务变化直接影响家长接娃、加餐和晚饭节奏。", "risk": "未成年人场景严禁酒类表达；不要把食品说成提升学习表现的工具。", "evidence": ["开学第一周里，校服、课后服务、军训和宿舍情绪高频出现。", "校园话题的核心是公平、破冰、想家和放学后空档。", "食品行业最适合拍点心、热饮、分享和轻补给，不要硬讲教育。", "当前优先建议试拍：母婴食品、乳制品、粮油调味速食。"], "versions": [{"industry": "母婴食品", "fit": "适合“给孩子这一口先选稳妥的”安心表达。 这条热点更适合把“课后服务调整带火放学后安”转成可立即试拍的内容入口。", "hook": "课后服务调整带火放学后安排给孩子吃的这一口，先别讲口味，先把安心感拍清楚。", "body": "0-3秒先给书包落桌、宿舍灯亮或军训集合；3-8秒拍分享、开喝、开吃或上桌；8-15秒收在“这口让新学期没那么慌”的情绪上。", "visual": "儿童餐桌、书包、包装细节、家长手部。", "guide": "只做透明和照顾感，不碰功效焦虑。"}, {"industry": "乳制品", "fit": "适合早餐、放学后、运动后和夜晚安稳感内容。 这条热点更适合把“课后服务调整带火放学后安”转成可立即试拍的内容入口。", "hook": "课后服务调整带火放学后安排这波最容易让人代入的，其实是手边那一口更稳的日常补给。", "body": "0-3秒先给书包落桌、宿舍灯亮或军训集合；3-8秒拍分享、开喝、开吃或上桌；8-15秒收在“这口让新学期没那么慌”的情绪上。", "visual": "冰箱开门、玻璃杯、吸管、早餐桌。", "guide": "更适合真实纪实感，不要广告片腔调。"}, {"industry": "粮油调味速食", "fit": "适合拍“十分钟上桌”“先把一顿饭做稳”的效率内容。 这条热点更适合把“课后服务调整带火放学后安”转成可立即试拍的内容入口。", "hook": "课后服务调整带火放学后安排别空聊趋势，先拍一顿十分钟能上桌的真实吃法。", "body": "0-3秒先给书包落桌、宿舍灯亮或军训集合；3-8秒拍分享、开喝、开吃或上桌；8-15秒收在“这口让新学期没那么慌”的情绪上。", "visual": "厨房灶台、起锅、拌面或热饭上桌。", "guide": "优先用真实厨房速度感，不要堆复杂花活。"}]}, {"rank": 3, "category": "校园", "conversion": "情绪陪伴", "name": "宿舍第一晚与“有点想家”内容", "window": "未来7-10天", "rationale": "新生破冰、第一次离家和宿舍桌面感都很强，适合治愈向内容。", "relevance": "适合拍“桌上这一口让人先稳下来”的轻陪伴场景。", "anchor": "书包落桌 + 宿舍开箱 + 放学空档", "summary": "新生破冰、第一次离家和宿舍桌面感都很强，适合治愈向内容。", "risk": "未成年人场景严禁酒类表达；不要把食品说成提升学习表现的工具。", "evidence": ["开学第一周里，校服、课后服务、军训和宿舍情绪高频出现。", "校园话题的核心是公平、破冰、想家和放学后空档。", "食品行业最适合拍点心、热饮、分享和轻补给，不要硬讲教育。", "当前优先建议试拍：乳制品、休闲食品、冲调品。"], "versions": [{"industry": "乳制品", "fit": "适合早餐、放学后、运动后和夜晚安稳感内容。 这条热点更适合把“宿舍第一晚与“有点想家””转成可立即试拍的内容入口。", "hook": "宿舍第一晚与“有点想家”内容这波最容易让人代入的，其实是手边那一口更稳的日常补给。", "body": "0-3秒先给书包落桌、宿舍灯亮或军训集合；3-8秒拍分享、开喝、开吃或上桌；8-15秒收在“这口让新学期没那么慌”的情绪上。", "visual": "冰箱开门、玻璃杯、吸管、早餐桌。", "guide": "更适合真实纪实感，不要广告片腔调。"}, {"industry": "休闲食品", "fit": "适合承接陪看、破冰、分享和轻松嘴替场景。 这条热点更适合把“宿舍第一晚与“有点想家””转成可立即试拍的内容入口。", "hook": "宿舍第一晚与“有点想家”内容一上强度，先别讲卖点，把边看边吃那一下拍出来就够了。", "body": "0-3秒先给书包落桌、宿舍灯亮或军训集合；3-8秒拍分享、开喝、开吃或上桌；8-15秒收在“这口让新学期没那么慌”的情绪上。", "visual": "拆袋、多人分食、沙发或工位桌面。", "guide": "用手部互动和咀嚼声强化停留感。"}, {"industry": "冲调品", "fit": "适合工位、宿舍、夜间陪伴和即刻热饮场景。 这条热点更适合把“宿舍第一晚与“有点想家””转成可立即试拍的内容入口。", "hook": "宿舍第一晚与“有点想家”内容别等刷完才找精神，先把手边这一杯冲开。", "body": "0-3秒先给书包落桌、宿舍灯亮或军训集合；3-8秒拍分享、开喝、开吃或上桌；8-15秒收在“这口让新学期没那么慌”的情绪上。", "visual": "马克杯、热水、搅拌、杯口热气。", "guide": "抓住3秒冲开瞬间，最容易留人。"}]}, {"rank": 4, "category": "校园", "conversion": "青春活力", "name": "军训才艺大赏继续扩散", "window": "未来7-10天", "rationale": "节奏快、反差大、青春感强，是非常适合食品客户借势的轻松热点。", "relevance": "适合做操场边、训练后和宿舍分享型内容。", "anchor": "书包落桌 + 宿舍开箱 + 放学空档", "summary": "节奏快、反差大、青春感强，是非常适合食品客户借势的轻松热点。", "risk": "未成年人场景严禁酒类表达；不要把食品说成提升学习表现的工具。", "evidence": ["开学第一周里，校服、课后服务、军训和宿舍情绪高频出现。", "校园话题的核心是公平、破冰、想家和放学后空档。", "食品行业最适合拍点心、热饮、分享和轻补给，不要硬讲教育。", "当前优先建议试拍：休闲食品、乳制品、冲调品。"], "versions": [{"industry": "休闲食品", "fit": "适合承接陪看、破冰、分享和轻松嘴替场景。 这条热点更适合把“军训才艺大赏继续扩散”转成可立即试拍的内容入口。", "hook": "军训才艺大赏继续扩散一上强度，先别讲卖点，把边看边吃那一下拍出来就够了。", "body": "0-3秒先给书包落桌、宿舍灯亮或军训集合；3-8秒拍分享、开喝、开吃或上桌；8-15秒收在“这口让新学期没那么慌”的情绪上。", "visual": "拆袋、多人分食、沙发或工位桌面。", "guide": "用手部互动和咀嚼声强化停留感。"}, {"industry": "乳制品", "fit": "适合早餐、放学后、运动后和夜晚安稳感内容。 这条热点更适合把“军训才艺大赏继续扩散”转成可立即试拍的内容入口。", "hook": "军训才艺大赏继续扩散这波最容易让人代入的，其实是手边那一口更稳的日常补给。", "body": "0-3秒先给书包落桌、宿舍灯亮或军训集合；3-8秒拍分享、开喝、开吃或上桌；8-15秒收在“这口让新学期没那么慌”的情绪上。", "visual": "冰箱开门、玻璃杯、吸管、早餐桌。", "guide": "更适合真实纪实感，不要广告片腔调。"}, {"industry": "冲调品", "fit": "适合工位、宿舍、夜间陪伴和即刻热饮场景。 这条热点更适合把“军训才艺大赏继续扩散”转成可立即试拍的内容入口。", "hook": "军训才艺大赏继续扩散别等刷完才找精神，先把手边这一杯冲开。", "body": "0-3秒先给书包落桌、宿舍灯亮或军训集合；3-8秒拍分享、开喝、开吃或上桌；8-15秒收在“这口让新学期没那么慌”的情绪上。", "visual": "马克杯、热水、搅拌、杯口热气。", "guide": "抓住3秒冲开瞬间，最容易留人。"}]}, {"rank": 5, "category": "校园", "conversion": "轻社交破冰", "name": "高校同名同月同日生新生话题走红", "window": "未来7-10天", "rationale": "这种轻松缘分梗很适合做“开学先递出去的一口”的破冰内容。", "relevance": "适合用低成本小剧情拍出校园好感。", "anchor": "书包落桌 + 宿舍开箱 + 放学空档", "summary": "这种轻松缘分梗很适合做“开学先递出去的一口”的破冰内容。", "risk": "未成年人场景严禁酒类表达；不要把食品说成提升学习表现的工具。", "evidence": ["开学第一周里，校服、课后服务、军训和宿舍情绪高频出现。", "校园话题的核心是公平、破冰、想家和放学后空档。", "食品行业最适合拍点心、热饮、分享和轻补给，不要硬讲教育。", "当前优先建议试拍：休闲食品、茶叶、乳制品。"], "versions": [{"industry": "休闲食品", "fit": "适合承接陪看、破冰、分享和轻松嘴替场景。 这条热点更适合把“高校同名同月同日生新生话”转成可立即试拍的内容入口。", "hook": "高校同名同月同日生新生话题走红一上强度，先别讲卖点，把边看边吃那一下拍出来就够了。", "body": "0-3秒先给书包落桌、宿舍灯亮或军训集合；3-8秒拍分享、开喝、开吃或上桌；8-15秒收在“这口让新学期没那么慌”的情绪上。", "visual": "拆袋、多人分食、沙发或工位桌面。", "guide": "用手部互动和咀嚼声强化停留感。"}, {"industry": "茶叶", "fit": "适合把节奏放慢，拍出一口热气和松弛感。 这条热点更适合把“高校同名同月同日生新生话”转成可立即试拍的内容入口。", "hook": "高校同名同月同日生新生话题走红别急着分析，先给观众一杯能把节奏慢下来的热茶。", "body": "0-3秒先给书包落桌、宿舍灯亮或军训集合；3-8秒拍分享、开喝、开吃或上桌；8-15秒收在“这口让新学期没那么慌”的情绪上。", "visual": "注水、茶汤、玻璃杯、木桌、热气。", "guide": "以氛围和质感取胜，不必堆知识。"}, {"industry": "乳制品", "fit": "适合早餐、放学后、运动后和夜晚安稳感内容。 这条热点更适合把“高校同名同月同日生新生话”转成可立即试拍的内容入口。", "hook": "高校同名同月同日生新生话题走红这波最容易让人代入的，其实是手边那一口更稳的日常补给。", "body": "0-3秒先给书包落桌、宿舍灯亮或军训集合；3-8秒拍分享、开喝、开吃或上桌；8-15秒收在“这口让新学期没那么慌”的情绪上。", "visual": "冰箱开门、玻璃杯、吸管、早餐桌。", "guide": "更适合真实纪实感，不要广告片腔调。"}]}, {"rank": 1, "category": "秋日生活", "conversion": "秋味第一口", "name": "送你一口秋天味道", "window": "未来10-15天", "rationale": "它几乎是近期最直接和吃喝内容发生关系的季节型热点。", "relevance": "适合整个食品行业做“第一口秋味”系列。", "anchor": "白露降温 + 秋味第一口 + 周末松弛感", "summary": "它几乎是近期最直接和吃喝内容发生关系的季节型热点。", "risk": "不要把季节感硬讲成功能，重点做味觉、松弛和场景。", "evidence": ["白露、降温、秋游、穿搭、跑步和地方鲜味在近7天同步走热。", "这类内容最适合做“季节到了，我先这样过”的生活方式表达。", "食品行业更适合拍热气、颜色、入口、上桌和出门带走感。", "当前优先建议试拍：茶叶、冲调品、生鲜。"], "versions": [{"industry": "茶叶", "fit": "适合把节奏放慢，拍出一口热气和松弛感。 这条热点更适合把“送你一口秋天味道”转成可立即试拍的内容入口。", "hook": "送你一口秋天味道别急着分析，先给观众一杯能把节奏慢下来的热茶。", "body": "0-3秒先给白露、降温、热气或周末出门信号；3-8秒切到入口、热饮、上桌或带走动作；8-15秒落在“秋天到了，我先这样过”的生活方式表达。", "visual": "注水、茶汤、玻璃杯、木桌、热气。", "guide": "以氛围和质感取胜，不必堆知识。"}, {"industry": "冲调品", "fit": "适合工位、宿舍、夜间陪伴和即刻热饮场景。 这条热点更适合把“送你一口秋天味道”转成可立即试拍的内容入口。", "hook": "送你一口秋天味道别等刷完才找精神，先把手边这一杯冲开。", "body": "0-3秒先给白露、降温、热气或周末出门信号；3-8秒切到入口、热饮、上桌或带走动作；8-15秒落在“秋天到了，我先这样过”的生活方式表达。", "visual": "马克杯、热水、搅拌、杯口热气。", "guide": "抓住3秒冲开瞬间，最容易留人。"}, {"industry": "生鲜", "fit": "最适合把趋势拍成切开、下锅、上桌的真实动作。 这条热点更适合把“送你一口秋天味道”转成可立即试拍的内容入口。", "hook": "送你一口秋天味道别光说热度，直接把切开、下锅、第一口端上桌。", "body": "0-3秒先给白露、降温、热气或周末出门信号；3-8秒切到入口、热饮、上桌或带走动作；8-15秒落在“秋天到了，我先这样过”的生活方式表达。", "visual": "砧板、锅气、食材纹理、热菜上桌。", "guide": "先拍食材状态，再落商品信息。"}]}, {"rank": 2, "category": "秋日生活", "conversion": "季节切换", "name": "白露降温与早秋穿搭切换", "window": "未来10-15天", "rationale": "一冷一热的体感变化会让热饮、热食和居家照顾类内容更容易成立。", "relevance": "适合拍热气、外套、出门前和回家后的第一口。", "anchor": "白露降温 + 秋味第一口 + 周末松弛感", "summary": "一冷一热的体感变化会让热饮、热食和居家照顾类内容更容易成立。", "risk": "不要把季节感硬讲成功能，重点做味觉、松弛和场景。", "evidence": ["白露、降温、秋游、穿搭、跑步和地方鲜味在近7天同步走热。", "这类内容最适合做“季节到了，我先这样过”的生活方式表达。", "食品行业更适合拍热气、颜色、入口、上桌和出门带走感。", "当前优先建议试拍：茶叶、冲调品、宠物。"], "versions": [{"industry": "茶叶", "fit": "适合把节奏放慢，拍出一口热气和松弛感。 这条热点更适合把“白露降温与早秋穿搭切换”转成可立即试拍的内容入口。", "hook": "白露降温与早秋穿搭切换别急着分析，先给观众一杯能把节奏慢下来的热茶。", "body": "0-3秒先给白露、降温、热气或周末出门信号；3-8秒切到入口、热饮、上桌或带走动作；8-15秒落在“秋天到了，我先这样过”的生活方式表达。", "visual": "注水、茶汤、玻璃杯、木桌、热气。", "guide": "以氛围和质感取胜，不必堆知识。"}, {"industry": "冲调品", "fit": "适合工位、宿舍、夜间陪伴和即刻热饮场景。 这条热点更适合把“白露降温与早秋穿搭切换”转成可立即试拍的内容入口。", "hook": "白露降温与早秋穿搭切换别等刷完才找精神，先把手边这一杯冲开。", "body": "0-3秒先给白露、降温、热气或周末出门信号；3-8秒切到入口、热饮、上桌或带走动作；8-15秒落在“秋天到了，我先这样过”的生活方式表达。", "visual": "马克杯、热水、搅拌、杯口热气。", "guide": "抓住3秒冲开瞬间，最容易留人。"}, {"industry": "宠物", "fit": "适合从“毛孩子也在一起过这个季节”切入陪伴感。 这条热点更适合把“白露降温与早秋穿搭切换”转成可立即试拍的内容入口。", "hook": "白露降温与早秋穿搭切换这波热点别只拍人，把毛孩子也一起带进镜头里更容易共情。", "body": "0-3秒先给白露、降温、热气或周末出门信号；3-8秒切到入口、热饮、上桌或带走动作；8-15秒落在“秋天到了，我先这样过”的生活方式表达。", "visual": "宠物食盆、主人手部、居家软光。", "guide": "重点拍陪伴，不碰医疗承诺。"}]}, {"rank": 3, "category": "秋日生活", "conversion": "轻运动生活", "name": "秋天你跑步了吗", "window": "未来10-15天", "rationale": "跑步和晨间自律会持续带动“我在过更健康的秋天”这类内容。", "relevance": "适合运动前后轻补给、早晨第一口和自我管理。", "anchor": "白露降温 + 秋味第一口 + 周末松弛感", "summary": "跑步和晨间自律会持续带动“我在过更健康的秋天”这类内容。", "risk": "不要把季节感硬讲成功能，重点做味觉、松弛和场景。", "evidence": ["白露、降温、秋游、穿搭、跑步和地方鲜味在近7天同步走热。", "这类内容最适合做“季节到了，我先这样过”的生活方式表达。", "食品行业更适合拍热气、颜色、入口、上桌和出门带走感。", "当前优先建议试拍：膳食营养、乳制品、保健食品。"], "versions": [{"industry": "膳食营养", "fit": "适合接状态感、轻补给和规律摄入。 这条热点更适合把“秋天你跑步了吗”转成可立即试拍的内容入口。", "hook": "秋天你跑步了吗别只围观热搜，真正能拍进日常的是把状态慢慢补回来。", "body": "0-3秒先给白露、降温、热气或周末出门信号；3-8秒切到入口、热饮、上桌或带走动作；8-15秒落在“秋天到了，我先这样过”的生活方式表达。", "visual": "随手杯、通勤包、运动后或工位桌面。", "guide": "突出节奏管理，避免夸大功能。"}, {"industry": "乳制品", "fit": "适合早餐、放学后、运动后和夜晚安稳感内容。 这条热点更适合把“秋天你跑步了吗”转成可立即试拍的内容入口。", "hook": "秋天你跑步了吗这波最容易让人代入的，其实是手边那一口更稳的日常补给。", "body": "0-3秒先给白露、降温、热气或周末出门信号；3-8秒切到入口、热饮、上桌或带走动作；8-15秒落在“秋天到了，我先这样过”的生活方式表达。", "visual": "冰箱开门、玻璃杯、吸管、早餐桌。", "guide": "更适合真实纪实感，不要广告片腔调。"}, {"industry": "保健食品", "fit": "适合接日常状态管理、规律感与轻科普表达。 这条热点更适合把“秋天你跑步了吗”转成可立即试拍的内容入口。", "hook": "秋天你跑步了吗这波别先讲功效，先把你每天怎么把状态顾住拍出来。", "body": "0-3秒先给白露、降温、热气或周末出门信号；3-8秒切到入口、热饮、上桌或带走动作；8-15秒落在“秋天到了，我先这样过”的生活方式表达。", "visual": "极简桌面、小瓶装、晨间或夜间灯光。", "guide": "只做日常管理心智，不碰疗效承诺。"}]}, {"rank": 4, "category": "秋日生活", "conversion": "地方美食", "name": "潮汕鱼饭与地方鲜味内容升温", "window": "未来7-10天", "rationale": "地方鲜味和真实餐桌永远是平台稳定的高停留内容。", "relevance": "适合拍地域味、锅气和“想立刻去吃”的真实食欲。", "anchor": "白露降温 + 秋味第一口 + 周末松弛感", "summary": "地方鲜味和真实餐桌永远是平台稳定的高停留内容。", "risk": "不要把季节感硬讲成功能，重点做味觉、松弛和场景。", "evidence": ["白露、降温、秋游、穿搭、跑步和地方鲜味在近7天同步走热。", "这类内容最适合做“季节到了，我先这样过”的生活方式表达。", "食品行业更适合拍热气、颜色、入口、上桌和出门带走感。", "当前优先建议试拍：生鲜、粮油调味速食、休闲食品。"], "versions": [{"industry": "生鲜", "fit": "最适合把趋势拍成切开、下锅、上桌的真实动作。 这条热点更适合把“潮汕鱼饭与地方鲜味内容升”转成可立即试拍的内容入口。", "hook": "潮汕鱼饭与地方鲜味内容升温别光说热度，直接把切开、下锅、第一口端上桌。", "body": "0-3秒先给白露、降温、热气或周末出门信号；3-8秒切到入口、热饮、上桌或带走动作；8-15秒落在“秋天到了，我先这样过”的生活方式表达。", "visual": "砧板、锅气、食材纹理、热菜上桌。", "guide": "先拍食材状态，再落商品信息。"}, {"industry": "粮油调味速食", "fit": "适合拍“十分钟上桌”“先把一顿饭做稳”的效率内容。 这条热点更适合把“潮汕鱼饭与地方鲜味内容升”转成可立即试拍的内容入口。", "hook": "潮汕鱼饭与地方鲜味内容升温别空聊趋势，先拍一顿十分钟能上桌的真实吃法。", "body": "0-3秒先给白露、降温、热气或周末出门信号；3-8秒切到入口、热饮、上桌或带走动作；8-15秒落在“秋天到了，我先这样过”的生活方式表达。", "visual": "厨房灶台、起锅、拌面或热饭上桌。", "guide": "优先用真实厨房速度感，不要堆复杂花活。"}, {"industry": "休闲食品", "fit": "适合承接陪看、破冰、分享和轻松嘴替场景。 这条热点更适合把“潮汕鱼饭与地方鲜味内容升”转成可立即试拍的内容入口。", "hook": "潮汕鱼饭与地方鲜味内容升温一上强度，先别讲卖点，把边看边吃那一下拍出来就够了。", "body": "0-3秒先给白露、降温、热气或周末出门信号；3-8秒切到入口、热饮、上桌或带走动作；8-15秒落在“秋天到了，我先这样过”的生活方式表达。", "visual": "拆袋、多人分食、沙发或工位桌面。", "guide": "用手部互动和咀嚼声强化停留感。"}]}, {"rank": 5, "category": "秋日生活", "conversion": "周末松弛", "name": "秋游清单与围炉露营松弛感", "window": "未来10-15天", "rationale": "白露后的周末内容会继续往露营、散步、围炉和短途出发发展。", "relevance": "适合拍包里带什么、到地先喝什么、晚上一起吃什么。", "anchor": "白露降温 + 秋味第一口 + 周末松弛感", "summary": "白露后的周末内容会继续往露营、散步、围炉和短途出发发展。", "risk": "不要把季节感硬讲成功能，重点做味觉、松弛和场景。", "evidence": ["白露、降温、秋游、穿搭、跑步和地方鲜味在近7天同步走热。", "这类内容最适合做“季节到了，我先这样过”的生活方式表达。", "食品行业更适合拍热气、颜色、入口、上桌和出门带走感。", "当前优先建议试拍：茶叶、冲调品、葡萄酒。"], "versions": [{"industry": "茶叶", "fit": "适合把节奏放慢，拍出一口热气和松弛感。 这条热点更适合把“秋游清单与围炉露营松弛感”转成可立即试拍的内容入口。", "hook": "秋游清单与围炉露营松弛感别急着分析，先给观众一杯能把节奏慢下来的热茶。", "body": "0-3秒先给白露、降温、热气或周末出门信号；3-8秒切到入口、热饮、上桌或带走动作；8-15秒落在“秋天到了，我先这样过”的生活方式表达。", "visual": "注水、茶汤、玻璃杯、木桌、热气。", "guide": "以氛围和质感取胜，不必堆知识。"}, {"industry": "冲调品", "fit": "适合工位、宿舍、夜间陪伴和即刻热饮场景。 这条热点更适合把“秋游清单与围炉露营松弛感”转成可立即试拍的内容入口。", "hook": "秋游清单与围炉露营松弛感别等刷完才找精神，先把手边这一杯冲开。", "body": "0-3秒先给白露、降温、热气或周末出门信号；3-8秒切到入口、热饮、上桌或带走动作；8-15秒落在“秋天到了，我先这样过”的生活方式表达。", "visual": "马克杯、热水、搅拌、杯口热气。", "guide": "抓住3秒冲开瞬间，最容易留人。"}, {"industry": "葡萄酒", "fit": "适合周末、观影、双人聊天和慢节奏氛围。 这条热点更适合把“秋游清单与围炉露营松弛感”转成可立即试拍的内容入口。", "hook": "秋游清单与围炉露营松弛感真正有画面的，不是热搜本身，而是这杯慢慢醒开的周末感。", "body": "0-3秒先给白露、降温、热气或周末出门信号；3-8秒切到入口、热饮、上桌或带走动作；8-15秒落在“秋天到了，我先这样过”的生活方式表达。", "visual": "高脚杯、倒酒、暖光餐桌、电影屏幕光。", "guide": "更适合质感路线，不宜过度热闹。"}]}];
+    const FILTERS = ["全部", "体育", "经济", "社会", "公共科技", "娱乐", "家庭", "校园", "秋日生活"];
+    const MOBILE_BREAKPOINT = 900;
+    const STACK_LAYOUT_THRESHOLD = 6;
+    let activeFilter = '全部';
+    let activeIndex = 0;
+    let mobileDeskCollapsed = window.innerWidth <= MOBILE_BREAKPOINT;
+    let deskFlashTimer = null;
+
+    function escapeHtml(str) {
+      return String(str).replace(/[&<>"']/g, function(s) {
+        return ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'})[s];
+      });
+    }
+
+    function pillClass(text) {
+      if (['情绪借势', '陪伴消费', '情绪陪伴', '情绪共鸣', '温暖关怀', '换季照顾'].includes(text)) return 'badge badge-green';
+      if (['场景种草', '生活方式', '工位陪伴', '夜聊陪伴', '综艺陪看', '周末观影', '出行备货', '高燃视觉', '秋味第一口', '轻运动生活', '地方美食', '周末松弛'].includes(text)) return 'badge badge-blue';
+      return 'badge badge-orange';
+    }
+
+    function shouldUseSplitLayout() {
+      return window.innerWidth > MOBILE_BREAKPOINT && getVisibleTopics().length > STACK_LAYOUT_THRESHOLD;
+    }
+
+    function syncRadarLayout() {
+      const linkage = document.getElementById('radarLinkage');
+      if (!linkage) return;
+      const split = shouldUseSplitLayout();
+      linkage.classList.toggle('layout-split', split);
+      linkage.classList.toggle('layout-stacked', !split);
+    }
+
+    function resetDeskScroll(behavior) {
+      const desk = document.getElementById('detailDesk');
+      if (!desk) return;
+      if (typeof desk.scrollTo === 'function') {
+        desk.scrollTo({ top: 0, behavior: behavior || 'auto' });
+      } else {
+        desk.scrollTop = 0;
+      }
+    }
+
+    function syncDeskShell() {
+      const deskShell = document.getElementById('deskShell');
+      const deskToggle = document.getElementById('deskToggle');
+      if (!deskShell || !deskToggle) return;
+      if (window.innerWidth <= MOBILE_BREAKPOINT) {
+        deskShell.classList.toggle('collapsed', mobileDeskCollapsed);
+        deskToggle.textContent = mobileDeskCollapsed ? '展开脚本灵感' : '收起脚本灵感';
+      } else {
+        deskShell.classList.remove('collapsed');
+        deskToggle.textContent = shouldUseSplitLayout() ? '详情区可滚动' : '当前展示全部脚本灵感';
+      }
+    }
+
+    function updateDeskSummary(topic) {
+      const summary = document.getElementById('deskSummary');
+      if (!summary || !topic) return;
+      summary.textContent = '已展开“' + topic.name + '”对应的 top3 行业方向；如果主营赛道不在其中，也可以结合当前热点继续延展。';
+    }
+
+    function flashDeskShell() {
+      const deskShell = document.getElementById('deskShell');
+      if (!deskShell) return;
+      deskShell.classList.remove('flash');
+      void deskShell.offsetWidth;
+      deskShell.classList.add('flash');
+      if (deskFlashTimer) clearTimeout(deskFlashTimer);
+      deskFlashTimer = setTimeout(function() {
+        deskShell.classList.remove('flash');
+      }, 1200);
+    }
+
+    function focusDesk(topic, shouldScroll) {
+      const deskShell = document.getElementById('deskShell');
+      if (!deskShell || !topic) return;
+      updateDeskSummary(topic);
+      if (window.innerWidth <= MOBILE_BREAKPOINT) {
+        mobileDeskCollapsed = false;
+        syncDeskShell();
+        if (shouldScroll) {
+          deskShell.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      } else if (shouldUseSplitLayout()) {
+        resetDeskScroll(shouldScroll ? 'smooth' : 'auto');
+      } else if (shouldScroll) {
+        const rect = deskShell.getBoundingClientRect();
+        const visible = rect.top >= 84 && rect.bottom <= window.innerHeight - 24;
+        if (!visible) {
+          deskShell.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+      flashDeskShell();
+    }
+
+    function initMaterialReport() {
+      const mount = document.getElementById('materialMount');
+      if (!mount || mount.shadowRoot) return;
+      const shadow = mount.attachShadow({ mode: 'open' });
+      const style = document.createElement('style');
+      style.textContent = document.getElementById('materialStyles').textContent;
+      const root = document.createElement('div');
+      root.className = 'material-root';
+      root.innerHTML = document.getElementById('materialTemplate').innerHTML;
+      shadow.appendChild(style);
+      shadow.appendChild(root);
+      const lb = shadow.getElementById('lb');
+      const lbimg = shadow.getElementById('lbimg');
+      shadow.querySelectorAll('.frame img').forEach(function(im) {
+        im.addEventListener('click', function() {
+          if (!lb || !lbimg) return;
+          lbimg.src = im.getAttribute('src') || '';
+          lb.classList.add('on');
+        });
+      });
+      if (lb) {
+        lb.addEventListener('click', function() {
+          lb.classList.remove('on');
+        });
+      }
+      const tabs = Array.from(shadow.querySelectorAll('.report-tab[data-target]'));
+      const sections = tabs.map(function(btn) {
+        return shadow.getElementById(btn.dataset.target || '');
+      }).filter(Boolean);
+      function setActiveMaterialTab(id) {
+        tabs.forEach(function(btn) {
+          btn.classList.toggle('active', btn.dataset.target === id);
+        });
+      }
+      tabs.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          const target = shadow.getElementById(btn.dataset.target || '');
+          if (!target) return;
+          setActiveMaterialTab(btn.dataset.target || '');
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+      function updateMaterialTabs() {
+        if (!sections.length) return;
+        const threshold = 150;
+        let current = sections[0].id;
+        sections.forEach(function(section) {
+          if (section.getBoundingClientRect().top - threshold <= 0) current = section.id;
+        });
+        setActiveMaterialTab(current);
+      }
+      if (sections.length) {
+        setActiveMaterialTab(sections[0].id);
+        const onScroll = function() { updateMaterialTabs(); };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll);
+        mount._updateMaterialTabs = updateMaterialTabs;
+        updateMaterialTabs();
+      }
+    }
+
+    function setView(view) {
+      const radarView = document.getElementById('radarView');
+      const materialView = document.getElementById('materialView');
+      document.querySelectorAll('.nav-entry[data-view]').forEach(function(btn) {
+        const active = btn.dataset.view === view;
+        btn.classList.toggle('active', active);
+        const link = btn.querySelector('.entry-link');
+        if (link) link.textContent = active ? '当前正在查看' : '点击切换查看';
+      });
+      if (radarView) radarView.classList.toggle('active', view === 'radar');
+      if (materialView) materialView.classList.toggle('active', view === 'material');
+      const top = document.getElementById('switchTop');
+      if (top) top.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function bindSectionNav() {
+      document.querySelectorAll('.nav-entry[data-view]').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          setView(btn.dataset.view || 'radar');
+        });
+      });
+    }
+
+    function renderFilters() {
+      const el = document.getElementById('filters');
+      el.innerHTML = FILTERS.map(function(f) {
+        return '<button class="filter-chip ' + (f === activeFilter ? 'active' : '') + '" data-filter="' + f + '">' + f + '</button>';
+      }).join('');
+      el.querySelectorAll('.filter-chip').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          activeFilter = btn.dataset.filter;
+          activeIndex = 0;
+          const topic = getVisibleTopics()[0] || TOPICS[0];
+          renderFilters();
+          syncRadarLayout();
+          renderGrid();
+          renderDesk(topic);
+          updateDeskSummary(topic);
+          if (shouldUseSplitLayout()) resetDeskScroll('auto');
+          if (window.innerWidth <= MOBILE_BREAKPOINT) {
+            mobileDeskCollapsed = true;
+          }
+          syncDeskShell();
+        });
+      });
+    }
+
+    function getVisibleTopics() {
+      return activeFilter === '全部' ? TOPICS : TOPICS.filter(function(t) { return t.category === activeFilter; });
+    }
+
+    function buildBundle(topic, version) {
+      return [
+        '【妙思视频生成指令】',
+        '热点主题：' + topic.name,
+        '适配赛道：' + version.industry,
+        '',
+        '一、前3-5秒脚本文案（可直接作为口播/字幕）',
+        version.hook,
+        '',
+        '二、15秒内视频脚本结构',
+        version.body,
+        '',
+        '三、画面生成提示',
+        version.visual,
+        '',
+        '四、生成限制提醒',
+        version.guide
+      ].join('\\n');
+    }
+
+    function renderGrid() {
+      const visible = getVisibleTopics();
+      const grid = document.getElementById('topicGrid');
+      if (!visible.length) {
+        grid.innerHTML = "<div class='box'>当前分类下暂无热点。</div>";
+        return;
+      }
+      grid.innerHTML = visible.map(function(topic, idx) {
+        return '<button type="button" class="card ' + (idx === activeIndex ? 'active' : '') + '" data-idx="' + idx + '">' +
+          '<div class="card-top"><span class="rank">TOP ' + String(topic.rank).padStart(2, '0') + ' · ' + topic.category + '</span><span class="' + pillClass(topic.conversion) + '">' + topic.conversion + '</span></div>' +
+          '<h4>' + escapeHtml(topic.name) + '</h4>' +
+          '<p>' + escapeHtml(topic.rationale) + '</p>' +
+          '<div class="relevance"><b>内容入口：</b>' + escapeHtml(topic.relevance) + '</div>' +
+          '<div class="card-bottom"><span class="badge badge-green">top3 优先方向</span><span class="window">窗口：' + topic.window + '</span></div>' +
+          (idx === activeIndex ? '<div class="card-inline-tip">桌面端右侧已联动更新，移动端会自动展开脚本灵感。</div>' : '') +
+        '</button>';
+      }).join('');
+      grid.querySelectorAll('.card').forEach(function(card) {
+        card.addEventListener('click', function() {
+          activeIndex = Number(card.dataset.idx || 0);
+          const topic = visible[activeIndex];
+          renderGrid();
+          renderDesk(topic);
+          focusDesk(topic, true);
+        });
+      });
+    }
+
+    function renderDesk(topic) {
+      if (!topic) return;
+      const desk = document.getElementById('detailDesk');
+      let versionsHtml = topic.versions.map(function(version, i) {
+        return '<article class="version">' +
+          '<div class="version-head"><div class="version-name"><span class="no">' + String.fromCharCode(65 + i) + '</span>' + escapeHtml(version.industry) + '</div><span class="' + pillClass(topic.conversion) + '">最适合优先试拍</span></div>' +
+          '<div class="fit"><b>为什么是它：</b>' + escapeHtml(version.fit) + '</div>' +
+          '<section class="shot"><span class="label">前3-5秒视频脚本文案</span><p>' + escapeHtml(version.hook) + '</p></section>' +
+          '<section class="prompt"><span class="label">15秒内视频脚本结构</span><p>' + escapeHtml(version.body) + '</p></section>' +
+          '<section class="guide"><span class="label">画面生成提示</span><p>' + escapeHtml(version.visual) + '</p></section>' +
+          '<section class="guide"><span class="label">生成限制提醒</span><p>' + escapeHtml(version.guide) + '</p></section>' +
+          '<div class="actions"><button class="btn btn-copy" data-copy="' + encodeURIComponent(buildBundle(topic, version)) + '">1. 复制妙思视频生成指令</button><a class="btn btn-link" href="https://admuse.qq.com/#/index" target="_blank" rel="noopener">2. 完成复制后，再去妙思生成</a></div>' +
+        '</article>';
+      }).join('');
+
+      desk.innerHTML = '<div class="desk-head"><div><h2 class="desk-title">' + escapeHtml(topic.name) + ' · 内容机会拆解</h2><p class="desk-desc">' + escapeHtml(topic.summary) + ' 下方提供最适合该热点的 3 个行业方向及脚本参考；其他赛道可结合自身货盘与场景延展。</p></div><div class="desk-anchor"><b>视觉锚点：</b>' + escapeHtml(topic.anchor) + '<br /><b>建议动作：</b>先拍热搜情绪，再拍入口/上桌/分享动作，最后再自然带到商品。</div></div>' +
+        '<div class="meta-grid"><div class="panel"><h5>开拍切入口</h5><div class="signal"><span class="badge badge-green">分类：' + topic.category + '</span><span class="badge badge-blue">方向：' + topic.conversion + '</span><span class="badge badge-orange">窗口：' + topic.window + '</span></div><ul>' + topic.evidence.map(function(x){ return '<li>' + escapeHtml(x) + '</li>'; }).join('') + '</ul><div class="risk"><b>内容边界：</b>' + escapeHtml(topic.risk) + '</div></div><div class="panel"><h5>怎么把它拍成内容</h5><ul><li>' + escapeHtml(topic.rationale) + '</li><li>' + escapeHtml(topic.relevance) + '</li><li>页面已经按统一热点池整理，方便直接选题、拆脚本和安排试拍。</li><li>如果你当前赛道不适合强借热点，可优先改写成“场景陪伴 / 生活方式 / 家庭照顾”版本。</li></ul></div></div>' +
+        '<div class="versions">' + versionsHtml + '</div>' +
+        '<div class="footer-note"><b>发布前请二次校验：</b>1）是否适合你当前货盘和目标人群；2）是否存在资质、标签、酒类/保健类表达边界；3）是否需要把“热点借势”改成“场景陪伴 / 生活方式”版本以降低生硬感；4）若是社会公共议题，只能做提醒、透明、关怀、陪伴，不要把公共事件直接做成促销。</div>';
+
+      desk.querySelectorAll('.btn-copy').forEach(function(btn) {
+        btn.addEventListener('click', async function() {
+          const payload = decodeURIComponent(btn.dataset.copy || '');
+          try {
+            await navigator.clipboard.writeText(payload);
+            const old = btn.textContent;
+            btn.textContent = '已复制视频生成指令';
+            setTimeout(function() { btn.textContent = old; }, 1800);
+          } catch (e) {
+            btn.textContent = '复制失败，请手动复制';
+            setTimeout(function() { btn.textContent = '1. 复制妙思视频生成指令'; }, 1800);
+          }
+        });
+      });
+    }
+
+    const deskToggle = document.getElementById('deskToggle');
+    if (deskToggle) {
+      deskToggle.addEventListener('click', function() {
+        if (window.innerWidth > MOBILE_BREAKPOINT) return;
+        mobileDeskCollapsed = !mobileDeskCollapsed;
+        syncDeskShell();
+        if (!mobileDeskCollapsed) {
+          const deskShell = document.getElementById('deskShell');
+          if (deskShell) deskShell.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
+
+    window.addEventListener('resize', function() {
+      syncRadarLayout();
+      syncDeskShell();
+    });
+
+    initMaterialReport();
+    bindSectionNav();
+    renderFilters();
+    syncRadarLayout();
+    renderGrid();
+    const initialTopic = getVisibleTopics()[0] || TOPICS[0];
+    renderDesk(initialTopic);
+    updateDeskSummary(initialTopic);
+    if (shouldUseSplitLayout()) resetDeskScroll('auto');
+    syncDeskShell();
+    setView('radar');
+  </script>
+</body>
+</html>
